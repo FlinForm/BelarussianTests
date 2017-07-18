@@ -1,14 +1,16 @@
 package by.test.belarussian.belarussiantests.model;
 
+import java.util.List;
+
 public class Question {
     private String question;
-    private Answer[] answers;
+    private List<Answer> answers;
     private String subject;
 
     public Question() {
     }
 
-    public Question(String question, Answer[] answers, String topic) {
+    public Question(String question, List<Answer> answers, String topic) {
         this.question = question;
         this.answers = answers;
         this.subject = topic;
@@ -22,11 +24,11 @@ public class Question {
         this.question = question;
     }
 
-    public Answer[] getAnswers() {
+    public List<Answer> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(Answer[] answers) {
+    public void setAnswers(List<Answer> answers) {
         this.answers = answers;
     }
 
@@ -38,7 +40,7 @@ public class Question {
         this.subject = subject;
     }
 
-    private class Answer {
+    protected class Answer {
         private String answer;
         private boolean isCorrect;
         private boolean isSelected;

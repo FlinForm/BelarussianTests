@@ -46,7 +46,8 @@
                     android:id="@+id/cardFirstAnswerImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/wrong" />
 
                 <TextView
                     android:id="@+id/cardFirstAnswerText"
@@ -67,7 +68,8 @@
                     android:id="@+id/cardSecondAnswerImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/wrong" />
 
                 <TextView
                     android:id="@+id/cardSecondAnswerText"
@@ -88,7 +90,8 @@
                     android:id="@+id/cardThirdAnswerImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/wrong" />
 
                 <TextView
                     android:id="@+id/cardThirdAnswerText"
@@ -108,7 +111,8 @@
                     android:id="@+id/cardFourthAnswerImage"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/wrong" />
 
                 <TextView
                     android:id="@+id/cardFourthAnswerText"
