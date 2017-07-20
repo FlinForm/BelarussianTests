@@ -1,55 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/questionLayout"
+    android:id="@+id/questionMainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/questionNumber"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_above="@+id/question"
-        android:layout_alignParentTop="true"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/firstAnswer"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/questionLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:text="Button" />
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <Button
-        android:id="@+id/secondAnswer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:text="Button" />
+        <TextView
+            android:id="@+id/questionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/question"
+            android:layout_alignParentTop="true"
+            android:text="TextView" />
 
-    <Button
-        android:id="@+id/thirdAnswer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:text="Button" />
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="TextView" />
 
-    <Button
-        android:id="@+id/fourthAnswer"
+        <CheckBox
+            android:id="@+id/firstQuestionCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/secondQuestionCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/thirdQuestionCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/fourthQuestionCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+        <CheckBox
+            android:id="@+id/fifthQuestionCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/finishButtonLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:text="Button" />
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/finishTestButton"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="false"
+            android:padding="4dp"
+            android:text="finish test"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
 </LinearLayout>

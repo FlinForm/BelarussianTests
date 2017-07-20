@@ -2,7 +2,6 @@ package by.test.belarussian.belarussiantests.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -12,25 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.type.CollectionType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.Answer;
 import by.test.belarussian.belarussiantests.model.Question;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -106,10 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         InputStream inputStream = getResources().openRawResource(R.raw.questions);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         byte buf[] = new byte[1024];
-        int len;
+        int length;
         try {
-            while ((len = inputStream.read(buf)) != -1) {
-                baos.write(buf, 0, len);
+            while ((length = inputStream.read(buf)) != -1) {
+                baos.write(buf, 0, length);
             }
             baos.close();
             inputStream.close();
@@ -117,12 +105,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         try {
             Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
-            /*for (Question question : Quiz.questions) {
+            for (Question question : Quiz.questions) {
                 System.out.println(question.toString());
-                for (Answer answer : question.getAnswers()) {
+                for (Question.Answer answer : question.getAnswers()) {
                     System.out.println(answer.getAnswer());
                 }
-            }*/
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

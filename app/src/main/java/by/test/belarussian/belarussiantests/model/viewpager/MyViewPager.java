@@ -2,14 +2,15 @@ package by.test.belarussian.belarussiantests.model.viewpager;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 public class MyViewPager extends ViewPager {
     private float initialXValue;
     private Direction direction;
 
-    public MyViewPager(Context context) {
-        super(context);
+    public MyViewPager(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.direction = Direction.ALL;
     }
 
@@ -62,7 +63,7 @@ public class MyViewPager extends ViewPager {
         this.direction = direction;
     }
 
-    private enum Direction {
+    public enum Direction {
         ALL,
         LEFT,
         RIGHT,

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ public class RecycleViewAdapter
         holder.secondAnswer.setText(questions.get(position).getAnswers()[1].getAnswer());
         holder.thirdAnswer.setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.answerImage.setImageResource(R.drawable.right);
     }
 
@@ -43,10 +45,11 @@ public class RecycleViewAdapter
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         private final TextView questionText;
-        private final TextView firstAnswer;
-        private final TextView secondAnswer;
-        private final TextView thirdAnswer;
-        private final TextView fourthAnswer;
+        private final CheckBox firstAnswer;
+        private final CheckBox secondAnswer;
+        private final CheckBox thirdAnswer;
+        private final CheckBox fourthAnswer;
+        private final CheckBox fifthAnswer;
         private final ImageView answerImage;
         private Question question;
 
@@ -54,25 +57,26 @@ public class RecycleViewAdapter
             super(itemView);
             question = null;
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
-            firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
-            secondAnswer = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
-            thirdAnswer = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
-            fourthAnswer = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
+            firstAnswer = (CheckBox) itemView.findViewById(R.id.firstQuestionCheckbox);
+            secondAnswer = (CheckBox) itemView.findViewById(R.id.secondQuestionCheckbox);
+            thirdAnswer = (CheckBox) itemView.findViewById(R.id.thirdQuestionCheckbox);
+            fourthAnswer = (CheckBox) itemView.findViewById(R.id.fourthQuestionCheckbox);
+            fifthAnswer = (CheckBox) itemView.findViewById(R.id.fifthQuestionCheckbox);
             answerImage = getAnswerImageView(itemView);
         }
 
+        // incorrect
         private ImageView getAnswerImageView(View itemView) {
             if (question.getAnswers()[0].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
-            }
-            if (question.getAnswers()[1].isCorrect()) {
+            } else if (question.getAnswers()[1].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
-            }
-            if (question.getAnswers()[2].isCorrect()) {
+            } else if (question.getAnswers()[2].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
-            }
-            if (question.getAnswers()[3].isCorrect()) {
+            } else if (question.getAnswers()[3].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
+            } else if (question.getAnswers()[4].isCorrect()) {
+                return (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
             }
             return null;
         }

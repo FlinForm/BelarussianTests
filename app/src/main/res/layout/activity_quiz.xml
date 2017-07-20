@@ -8,5 +8,11 @@
     <FrameLayout
         android:id="@+id/questionLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <by.test.belarussian.belarussiantests.model.viewpager.MyViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </FrameLayout>
 </LinearLayout>

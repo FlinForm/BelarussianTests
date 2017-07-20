@@ -1,32 +1,102 @@
 [
-    {
-      "question" : "Адзначце словы, у якіх пішацца літара а:",
-      "subject" : "ПРАВАПІС ГАЛОСНЫХ",
-      "answers": [
-        {"answer": "адр...сат", "correct": true, "selected": false},
-        {"answer": "бут...рброд", "correct": false, "selected": false},
-        {"answer": "Чыкаг...", "correct": true, "selected": false},
-        {"answer": "вер...цяно", "correct": true, "selected": false},
-        {"answer": "зарж...вець", "correct": true, "selected": false}
-      ]},
-    {
-      "question" : "Адзначце словы, у якіх пішацца літара о:",
-      "subject" : "ПРАВАПІС ГАЛОСНЫХ",
-      "answers": [
-        {"answer": "танг...", "correct": false, "selected": false},
-        {"answer": "ватэрп...ла", "correct": true, "selected": false},
-        {"answer": "гл...таць", "correct": false, "selected": false},
-        {"answer": "ч...вен", "correct": true, "selected": false},
-        {"answer": "в...семдзесят", "correct": true, "selected": false}
-      ]},
-    {
-      "question" : "Адзначце словы, у якіх пішацца літара э:",
-      "subject" : "ПРАВАПІС ГАЛОСНЫХ",
-      "answers": [
-        {"answer": "т...лефон", "correct": true, "selected": false},
-        {"answer": "ас...нсаваць", "correct": true, "selected": false},
-        {"answer": "р...лiгiя", "correct": true, "selected": false},
-        {"answer": "гр...мучы", "correct": false, "selected": false},
-        {"answer": "лат...рэя", "correct": false, "selected": false}
-      ]}
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара а:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "адр...сат", "correct": true, "selected": false},
+      {"answer": "бут...рброд", "correct": false, "selected": false},
+      {"answer": "Чыкаг...", "correct": true, "selected": false},
+      {"answer": "вер...цяно", "correct": true, "selected": false},
+      {"answer": "зарж...вець", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара о:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "танг...", "correct": false, "selected": false},
+      {"answer": "ватэрп...ла", "correct": true, "selected": false},
+      {"answer": "гл...таць", "correct": false, "selected": false},
+      {"answer": "ч...вен", "correct": true, "selected": false},
+      {"answer": "в...семдзесят", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара э:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "т...лефон", "correct": true, "selected": false},
+      {"answer": "ас...нсаваць", "correct": true, "selected": false},
+      {"answer": "р...лiгiя", "correct": true, "selected": false},
+      {"answer": "гр...мучы", "correct": false, "selected": false},
+      {"answer": "лат...рэя", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара ы:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "р...форма", "correct": false, "selected": false},
+      {"answer": "iнж...нер", "correct": true, "selected": false},
+      {"answer": "т...рмометр", "correct": false, "selected": false},
+      {"answer": "др...мучы", "correct": true, "selected": false},
+      {"answer": "канц..лярыя", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара е:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "...гiпецкая", "correct": false, "selected": false},
+      {"answer": "с...ржанцкія", "correct": true, "selected": false},
+      {"answer": "г...неральскі", "correct": false, "selected": false},
+      {"answer": "...фрэйтарскі", "correct": true, "selected": false},
+      {"answer": "с...лянскі сыр", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца літара я:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "выгл...д", "correct": true, "selected": false},
+      {"answer": "грэб...нь", "correct": false, "selected": false},
+      {"answer": "с...рабро", "correct": false, "selected": false},
+      {"answer": "с...рэбраны", "correct": true, "selected": false},
+      {"answer": "дзес...тка", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца злучальная літара я:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "гус...гадоўля", "correct": false, "selected": false},
+      {"answer": "сін...вокі", "correct": true, "selected": false},
+      {"answer": "ален...вод", "correct": true, "selected": false},
+      {"answer": "агн...стрэльны", "correct": true, "selected": false},
+      {"answer": "заходн..сібірскі", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "ААдзначце словы, у якіх пішацца злучальная літара е:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "дво...ўладдзе", "correct": true, "selected": false},
+      {"answer": "стал...ліцейны", "correct": true, "selected": false},
+      {"answer": "ус...беларускі", "correct": true, "selected": false},
+      {"answer": "кле...вар", "correct": false, "selected": false},
+      {"answer": "жыцц...сцвярджальны", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца злучальная літара о:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "шкл...вар", "correct": false, "selected": false},
+      {"answer": "ільн...валакно", "correct": true, "selected": false},
+      {"answer": "ільн...часалка", "correct": true, "selected": false},
+      {"answer": "ільн...сеялка", "correct": false, "selected": false},
+      {"answer": "энерг...гаспадарка", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца злучальная літара а:",
+    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "answers": [
+      {"answer": "закон...парушальнік", "correct": true, "selected": false},
+      {"answer": "шкл...пластыкавы", "correct": true, "selected": false},
+      {"answer": "час...піс", "correct": false, "selected": false},
+      {"answer": "адн...разовы", "correct": true, "selected": false},
+      {"answer": "кін...герой", "correct": true, "selected": false}
+    ]}
   ]

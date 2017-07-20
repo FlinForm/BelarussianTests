@@ -121,6 +121,27 @@
                     android:layout_marginStart="4dp"
                     android:textSize="18sp" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardFifthAnswerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cardFifthAnswerImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="4dp"
+                    app:srcCompat="@drawable/wrong" />
+
+                <TextView
+                    android:id="@+id/cardFifthAnswerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textSize="18sp" />
+            </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

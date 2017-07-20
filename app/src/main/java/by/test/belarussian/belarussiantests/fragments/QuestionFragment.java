@@ -43,17 +43,12 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
             questionNumber = bundle.getInt(QUESTION_NUMBER);
         }
 
-        firstAnswer = (Button) view.findViewById(R.id.firstAnswer);
-        firstAnswer.setOnClickListener(this);
-
-        secondAnswer = (Button) view.findViewById(R.id.secondAnswer);
-        secondAnswer.setOnClickListener(this);
-
-        thirdAnswer = (Button) view.findViewById(R.id.thirdAnswer);
-        thirdAnswer.setOnClickListener(this);
-
-        fourthAnswer = (Button) view.findViewById(R.id.fourthAnswer);
-        fourthAnswer.setOnClickListener(this);
+        if (questionNumber == 9) {
+            Button button = (Button) view.findViewById(R.id.finishTestButton);
+            button.setVisibility(View.VISIBLE);
+            button.setClickable(true);
+            button.setOnClickListener(this);
+        }
 
         TextView textView = (TextView) view.findViewById(R.id.question);
         textView.setText(String.valueOf(questionNumber));
@@ -62,20 +57,8 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (questionNumber == 9) {
-            getActivity().getSupportFragmentManager().beginTransaction().remove(this).commit();
             listener.onTestFinished(System.currentTimeMillis());
-        } else {
-            fragment = new QuestionFragment();
-            bundle = new Bundle();
-            bundle.putInt(QUESTION_NUMBER, ++questionNumber);
-            fragment.setArguments(bundle);
-            getActivity()
-                    .getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.questionLayout, fragment)
-                    .commit();
-        }
+            System.out.println("inside method");
     }
 
     public interface OnTestFinishedListener {
