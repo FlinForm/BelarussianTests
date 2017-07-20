@@ -45,11 +45,11 @@ public class RecycleViewAdapter
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         private final TextView questionText;
-        private final CheckBox firstAnswer;
-        private final CheckBox secondAnswer;
-        private final CheckBox thirdAnswer;
-        private final CheckBox fourthAnswer;
-        private final CheckBox fifthAnswer;
+        private final TextView firstAnswer;
+        private final TextView secondAnswer;
+        private final TextView thirdAnswer;
+        private final TextView fourthAnswer;
+        private final TextView fifthAnswer;
         private final ImageView answerImage;
         private Question question;
 
@@ -57,11 +57,11 @@ public class RecycleViewAdapter
             super(itemView);
             question = null;
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
-            firstAnswer = (CheckBox) itemView.findViewById(R.id.firstQuestionCheckbox);
-            secondAnswer = (CheckBox) itemView.findViewById(R.id.secondQuestionCheckbox);
-            thirdAnswer = (CheckBox) itemView.findViewById(R.id.thirdQuestionCheckbox);
-            fourthAnswer = (CheckBox) itemView.findViewById(R.id.fourthQuestionCheckbox);
-            fifthAnswer = (CheckBox) itemView.findViewById(R.id.fifthQuestionCheckbox);
+            firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
+            secondAnswer = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
+            thirdAnswer = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
+            fourthAnswer = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
+            fifthAnswer = (TextView) itemView.findViewById(R.id.cardFifthAnswerText);
             answerImage = getAnswerImageView(itemView);
         }
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BelarussianTests</string>
+    <string name="question_number">Пытанне №</string>
 </resources>

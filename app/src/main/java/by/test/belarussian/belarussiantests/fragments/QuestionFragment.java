@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
+import by.test.belarussian.belarussiantests.model.Quiz;
 
 public class QuestionFragment extends Fragment implements View.OnClickListener {
     private static final String QUESTION_NUMBER = "questionNumber";
@@ -18,7 +20,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
     private Bundle bundle;
     private OnTestFinishedListener listener;
     private int questionNumber;
-    private Button firstAnswer, secondAnswer, thirdAnswer, fourthAnswer;
+    private CheckBox firstAnswer, secondAnswer, thirdAnswer, fourthAnswer, fifthAnswer;
 
     @Override
     public void onAttach(Context context) {
@@ -50,9 +52,35 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
             button.setOnClickListener(this);
         }
 
-        TextView textView = (TextView) view.findViewById(R.id.question);
-        textView.setText(String.valueOf(questionNumber));
+        TextView fragmentTitle = (TextView) view.findViewById(R.id.questionNumber);
+        fragmentTitle.setText(getString(R.string.question_number) + (questionNumber + 1));
 
+        TextView question = (TextView) view.findViewById(R.id.question);
+        question.setText(Quiz.getQuestions().get(questionNumber).getQuestion());
+
+        firstAnswer = (CheckBox) view.findViewById(R.id.firstAnswerCheckbox);
+        firstAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[0].getAnswer());
+
+        secondAnswer = (CheckBox) view.findViewById(R.id.secondAnswerCheckbox);
+        secondAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[1].getAnswer());
+
+        thirdAnswer = (CheckBox) view.findViewById(R.id.thirdAnswerCheckbox);
+        thirdAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[2].getAnswer());
+
+        fourthAnswer = (CheckBox) view.findViewById(R.id.fourthAnswerCheckbox);
+        fourthAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[3].getAnswer());
+
+        fifthAnswer = (CheckBox) view.findViewById(R.id.fifthAnswerCheckbox);
+        fifthAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[4].getAnswer());
+
+
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        System.out.println(questionNumber);
     }
 
     @Override

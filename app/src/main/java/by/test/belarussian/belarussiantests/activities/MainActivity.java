@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setDefaultFontPath(DEFAULT_FONTS_PATH)
                 .setFontAttrId(R.attr.fontPath)
                 .build());
-        System.out.println(personName == null);
+
+        parseJson();
     }
 
     @Override
@@ -70,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.resultsButton:
                 break;
             case R.id.rulesButton:
-                parseJson();
                 break;
             case R.id.topicButton:
                 break;
