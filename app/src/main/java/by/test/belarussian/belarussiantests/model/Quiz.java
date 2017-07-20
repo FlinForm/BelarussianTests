@@ -1,14 +1,20 @@
 package by.test.belarussian.belarussiantests.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Quiz {
     private static String name;
     private static long time;
-    private static List<Question> questions;
+
+    public static List<Question> questions;
 
     public static String getName() {
         return name;

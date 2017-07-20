@@ -29,10 +29,10 @@ public class RecycleViewAdapter
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         holder.question = questions.get(position);
         holder.questionText.setText(questions.get(position).getQuestion());
-        holder.firstAnswer.setText(questions.get(position).getAnswers().get(0).getAnswer());
-        holder.secondAnswer.setText(questions.get(position).getAnswers().get(1).getAnswer());
-        holder.thirdAnswer.setText(questions.get(position).getAnswers().get(2).getAnswer());
-        holder.fourthAnswer.setText(questions.get(position).getAnswers().get(3).getAnswer());
+        holder.firstAnswer.setText(questions.get(position).getAnswers()[0].getAnswer());
+        holder.secondAnswer.setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.thirdAnswer.setText(questions.get(position).getAnswers()[2].getAnswer());
+        holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.answerImage.setImageResource(R.drawable.right);
     }
 
@@ -62,16 +62,16 @@ public class RecycleViewAdapter
         }
 
         private ImageView getAnswerImageView(View itemView) {
-            if (question.getAnswers().get(0).isCorrect()) {
+            if (question.getAnswers()[0].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
             }
-            if (question.getAnswers().get(1).isCorrect()) {
+            if (question.getAnswers()[1].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
             }
-            if (question.getAnswers().get(2).isCorrect()) {
+            if (question.getAnswers()[2].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
             }
-            if (question.getAnswers().get(3).isCorrect()) {
+            if (question.getAnswers()[3].isCorrect()) {
                 return (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
             }
             return null;
