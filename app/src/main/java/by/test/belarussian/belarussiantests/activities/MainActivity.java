@@ -25,7 +25,14 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
+    private static final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
+    static {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath(DEFAULT_FONTS_PATH)
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+    }
+
     private final String SNACKBAR_TEXT = "Enter your name!";
     private final int REQUEST_CODE = 13;
 
@@ -41,13 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.dialog);
         dialog = builder.create();
-
-
-
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath(DEFAULT_FONTS_PATH)
-                .setFontAttrId(R.attr.fontPath)
-                .build());
 
         parseJson();
     }
@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Quiz.setName(personName.getText().toString());
                 Intent intent = new Intent(this, QuizActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
+                dialog.hide();
                 break;
             case R.id.dialogCancelButton:
                 dialog.hide();
@@ -105,12 +106,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         try {
             Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
-            for (Question question : Quiz.questions) {
+            /*for (Question question : Quiz.questions) {
                 System.out.println(question.toString());
                 for (Question.Answer answer : question.getAnswers()) {
                     System.out.println(answer.getAnswer());
                 }
-            }
+            }*/
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -35,7 +35,7 @@ public class RecycleViewAdapter
         holder.thirdAnswer.setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
-        holder.answerImage.setImageResource(R.drawable.right);
+        holder.setAnswerImage();
     }
 
     @Override
@@ -50,35 +50,59 @@ public class RecycleViewAdapter
         private final TextView thirdAnswer;
         private final TextView fourthAnswer;
         private final TextView fifthAnswer;
-        private final ImageView answerImage;
+        private ImageView firstAnswerImage;
+        private ImageView secondAnswerImage;
+        private ImageView thirdAnswerImage;
+        private ImageView fourthAnswerImage;
+        private ImageView fifthAnswerImage;
         private Question question;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             question = null;
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
+
             firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
             secondAnswer = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
             thirdAnswer = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
             fourthAnswer = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
             fifthAnswer = (TextView) itemView.findViewById(R.id.cardFifthAnswerText);
-            answerImage = getAnswerImageView(itemView);
+
+            firstAnswerImage = (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
+            secondAnswerImage = (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
+            thirdAnswerImage = (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
+            fourthAnswerImage = (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
+            fifthAnswerImage = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
         }
 
-        // incorrect
-        private ImageView getAnswerImageView(View itemView) {
+        protected void setAnswerImage() {
             if (question.getAnswers()[0].isCorrect()) {
-                return (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
-            } else if (question.getAnswers()[1].isCorrect()) {
-                return (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
-            } else if (question.getAnswers()[2].isCorrect()) {
-                return (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
-            } else if (question.getAnswers()[3].isCorrect()) {
-                return (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
-            } else if (question.getAnswers()[4].isCorrect()) {
-                return (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
+                System.out.println(1);
+                if (question.getAnswers()[0].isSelected()) {
+                    System.out.println(2);
+                    firstAnswerImage.setImageResource(R.drawable.right);
+                }
             }
-            return null;
+            if (question.getAnswers()[1].isCorrect()) {
+                if (question.getAnswers()[1].isSelected()) {
+                    secondAnswerImage.setImageResource(R.drawable.right);
+                }
+            }
+            if (question.getAnswers()[2].isCorrect()) {
+                if (question.getAnswers()[2].isSelected()) {
+                    thirdAnswerImage.setImageResource(R.drawable.right);
+                }
+            }
+            if (question.getAnswers()[3].isCorrect()) {
+                if (question.getAnswers()[3].isSelected()) {
+                    fourthAnswerImage.setImageResource(R.drawable.right);
+                }
+            }
+            if (question.getAnswers()[4].isCorrect()) {
+                if (question.getAnswers()[4].isSelected()) {
+                    fifthAnswerImage.setImageResource(R.drawable.right);
+                }
+            }
         }
     }
 }

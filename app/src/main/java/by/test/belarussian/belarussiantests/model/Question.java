@@ -7,7 +7,7 @@ public class Question {
     private String question;
     private String subject;
 
-    private Answer[] answers;
+    public Answer[] answers;
 
     public Question() {
     }
