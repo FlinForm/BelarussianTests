@@ -1,18 +1,15 @@
 package by.test.belarussian.belarussiantests.model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Quiz {
+    private static DateFormat formatter = new SimpleDateFormat("mm:ss");
     private static String name;
     private static long time;
+    private static int correctAnswers;
 
     public static List<Question> questions;
 
@@ -26,7 +23,6 @@ public class Quiz {
 
     public static String getTime() {
         Date date = new Date(time);
-        DateFormat formatter = new SimpleDateFormat("mm:ss");
         return formatter.format(date);
     }
 
@@ -40,5 +36,13 @@ public class Quiz {
 
     public static void setQuestions(List<Question> questions) {
         Quiz.questions = questions;
+    }
+
+    public static int getCorrectAnswers() {
+        return correctAnswers;
+    }
+
+    public static void addCorrectAnswer() {
+        correctAnswers++;
     }
 }

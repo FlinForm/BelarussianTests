@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#616161</color>
     <color name="colorAccent">#FFEB3B</color>
     <color name="cardColor">#D7CCC8</color>
+    <color name="dialogButtonColor">#1565C0</color>
+    <color name="blackColor">#212121</color>
+    <color name="rightCardColor">#69F0AE</color>
+    <color name="wrongCardColor">#FF5252</color>
 </resources>

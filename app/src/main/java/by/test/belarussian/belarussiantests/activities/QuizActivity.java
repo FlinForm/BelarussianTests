@@ -24,7 +24,7 @@ public class QuizActivity extends AppCompatActivity
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
-    
+
     private long startTime;
     private MyViewPager viewPager;
 

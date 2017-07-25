@@ -1,10 +1,11 @@
 package by.test.belarussian.belarussiantests.model;
 
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class RecycleViewAdapter
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         holder.question = questions.get(position);
+        //holder.setDefaultAnswerImage();
         holder.questionText.setText(questions.get(position).getQuestion());
         holder.firstAnswer.setText(questions.get(position).getAnswers()[0].getAnswer());
         holder.secondAnswer.setText(questions.get(position).getAnswers()[1].getAnswer());
@@ -36,6 +38,11 @@ public class RecycleViewAdapter
         holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.setAnswerImage();
+        holder.setCardViewColor();
+
+        if (holder.isQuestionAnsweredRight) {
+            Quiz.addCorrectAnswer();
+        }
     }
 
     @Override
@@ -50,17 +57,25 @@ public class RecycleViewAdapter
         private final TextView thirdAnswer;
         private final TextView fourthAnswer;
         private final TextView fifthAnswer;
-        private ImageView firstAnswerImage;
-        private ImageView secondAnswerImage;
-        private ImageView thirdAnswerImage;
-        private ImageView fourthAnswerImage;
-        private ImageView fifthAnswerImage;
+        private final ImageView firstAnswerImage;
+        private final ImageView secondAnswerImage;
+        private final ImageView thirdAnswerImage;
+        private final ImageView fourthAnswerImage;
+        private final ImageView fifthAnswerImage;
+        private final CardView cardView;
         private Question question;
+        private boolean isQuestionAnsweredRight;
+        private final View itemView;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             question = null;
+            isQuestionAnsweredRight = true;
+            this.itemView = itemView;
+
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
+
+            cardView = (CardView) itemView.findViewById(R.id.cardView);
 
             firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
             secondAnswer = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
@@ -76,33 +91,54 @@ public class RecycleViewAdapter
         }
 
         protected void setAnswerImage() {
-            if (question.getAnswers()[0].isCorrect()) {
-                System.out.println(1);
-                if (question.getAnswers()[0].isSelected()) {
-                    System.out.println(2);
-                    firstAnswerImage.setImageResource(R.drawable.right);
+            for (int i = 0; i < 5; i++) {
+                if (question.getAnswers()[i].isCorrect()) {
+                    if (question.getAnswers()[i].isSelected()) {
+                        getAnswerImage(i).setImageResource(R.drawable.right);
+                    } else {
+                        isQuestionAnsweredRight = false;
+                        getAnswerImage(i).setImageResource(R.drawable.wrong);
+                    }
                 }
             }
-            if (question.getAnswers()[1].isCorrect()) {
-                if (question.getAnswers()[1].isSelected()) {
-                    secondAnswerImage.setImageResource(R.drawable.right);
-                }
+        }
+
+        private void setDefaultAnswerImage() {
+            firstAnswerImage.setImageResource(R.drawable.wrong);
+            secondAnswerImage.setImageResource(R.drawable.wrong);
+            thirdAnswerImage.setImageResource(R.drawable.wrong);
+            fourthAnswerImage.setImageResource(R.drawable.wrong);
+            fifthAnswerImage.setImageResource(R.drawable.wrong);
+
+
+        }
+
+        private ImageView getAnswerImage(int answer) {
+            switch (answer) {
+                case 0:
+                    return firstAnswerImage;
+                case 1:
+                    return secondAnswerImage;
+                case 2:
+                    return thirdAnswerImage;
+                case 3:
+                    return fourthAnswerImage;
+                case 4:
+                    return fifthAnswerImage;
+                default:
+                    return null;
             }
-            if (question.getAnswers()[2].isCorrect()) {
-                if (question.getAnswers()[2].isSelected()) {
-                    thirdAnswerImage.setImageResource(R.drawable.right);
-                }
+        }
+
+        private void setCardViewColor() {
+            if (isQuestionAnsweredRight) {
+                cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
+                        R.color.rightCardColor));
+            } else {
+                cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
+                        R.color.wrongCardColor));
             }
-            if (question.getAnswers()[3].isCorrect()) {
-                if (question.getAnswers()[3].isSelected()) {
-                    fourthAnswerImage.setImageResource(R.drawable.right);
-                }
-            }
-            if (question.getAnswers()[4].isCorrect()) {
-                if (question.getAnswers()[4].isSelected()) {
-                    fifthAnswerImage.setImageResource(R.drawable.right);
-                }
-            }
+
         }
     }
 }

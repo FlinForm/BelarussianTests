@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="Enter your name:"
+            android:textColor="@color/blackColor"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -41,19 +42,23 @@
 
         <Button
             android:id="@+id/dialogStartButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:onClick="onClick"
-            android:text="start" />
+            android:text="start"
+            android:textColor="@color/dialogButtonColor" />
 
         <Button
             android:id="@+id/dialogCancelButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="4dp"
             android:onClick="onClick"
-            android:text="cancel" />
+            android:text="cancel"
+            android:textColor="@color/dialogButtonColor" />
     </LinearLayout>
 
 </LinearLayout>
