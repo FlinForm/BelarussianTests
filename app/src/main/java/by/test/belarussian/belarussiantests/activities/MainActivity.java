@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dialogStartButton:
                 personName = (EditText) dialog.findViewById(R.id.nameEditText);
+                assert personName != null;
                 if ("".equals(personName.getText().toString())) {
                     Snackbar.make(v, SNACKBAR_TEXT, BaseTransientBottomBar.LENGTH_SHORT).show();
                     return;
@@ -102,16 +103,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             baos.close();
             inputStream.close();
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
         try {
             Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
-            /*for (Question question : Quiz.questions) {
-                System.out.println(question.toString());
-                for (Question.Answer answer : question.getAnswers()) {
-                    System.out.println(answer.getAnswer());
-                }
-            }*/
         } catch (IOException e) {
             e.printStackTrace();
         }

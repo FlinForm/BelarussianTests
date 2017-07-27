@@ -14,34 +14,38 @@
 
         <Button
             android:id="@+id/startTestButton"
+            style="@android:style/Widget.Material.Light.Button.Inset"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick"
-            android:text="Start test" />
+            android:text="@string/start_test_button" />
 
         <Button
             android:id="@+id/topicButton"
+            style="@android:style/Widget.Material.Light.Button.Inset"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick"
-            android:text="Topics" />
+            android:text="@string/topics_button" />
 
         <Button
             android:id="@+id/resultsButton"
+            style="@android:style/Widget.Material.Light.Button.Inset"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick"
-            android:text="Best Results" />
+            android:text="@string/best_results_button" />
 
         <Button
             android:id="@+id/rulesButton"
+            style="@android:style/Widget.Material.Light.Button.Inset"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick"
-            android:text="Rules" />
+            android:text="@string/rules_button" />
     </LinearLayout>
 </RelativeLayout>

@@ -16,18 +16,12 @@ public class MyViewPager extends ViewPager {
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        if (this.IsSwipeAllowed(ev)) {
-            return super.onTouchEvent(ev);
-        }
-        return false;
+        return this.IsSwipeAllowed(ev) && super.onTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        if (this.IsSwipeAllowed(ev)) {
-            return super.onInterceptTouchEvent(ev);
-        }
-        return false;
+        return this.IsSwipeAllowed(ev) && super.onInterceptTouchEvent(ev);
     }
 
     @Override

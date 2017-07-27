@@ -29,20 +29,18 @@ public class RecycleViewAdapter
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
-        holder.question = questions.get(position);
-        //holder.setDefaultAnswerImage();
+        holder.setDefaultAnswerImage();
         holder.questionText.setText(questions.get(position).getQuestion());
         holder.firstAnswer.setText(questions.get(position).getAnswers()[0].getAnswer());
         holder.secondAnswer.setText(questions.get(position).getAnswers()[1].getAnswer());
         holder.thirdAnswer.setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
-        holder.setAnswerImage();
-        holder.setCardViewColor();
+        holder.setAnswerImage(questions.get(position));
+        holder.setCardViewColor(Quiz.getQuestions().get(position));
+        System.out.println(questions.get(position).isAnswered());
+        System.out.println(Quiz.getQuestions().get(position).isAnswered());
 
-        if (holder.isQuestionAnsweredRight) {
-            Quiz.addCorrectAnswer();
-        }
     }
 
     @Override
@@ -63,14 +61,10 @@ public class RecycleViewAdapter
         private final ImageView fourthAnswerImage;
         private final ImageView fifthAnswerImage;
         private final CardView cardView;
-        private Question question;
-        private boolean isQuestionAnsweredRight;
         private final View itemView;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
-            question = null;
-            isQuestionAnsweredRight = true;
             this.itemView = itemView;
 
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
@@ -90,13 +84,12 @@ public class RecycleViewAdapter
             fifthAnswerImage = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
         }
 
-        protected void setAnswerImage() {
+        void setAnswerImage(Question question) {
             for (int i = 0; i < 5; i++) {
                 if (question.getAnswers()[i].isCorrect()) {
                     if (question.getAnswers()[i].isSelected()) {
                         getAnswerImage(i).setImageResource(R.drawable.right);
                     } else {
-                        isQuestionAnsweredRight = false;
                         getAnswerImage(i).setImageResource(R.drawable.wrong);
                     }
                 }
@@ -104,13 +97,11 @@ public class RecycleViewAdapter
         }
 
         private void setDefaultAnswerImage() {
-            firstAnswerImage.setImageResource(R.drawable.wrong);
-            secondAnswerImage.setImageResource(R.drawable.wrong);
-            thirdAnswerImage.setImageResource(R.drawable.wrong);
-            fourthAnswerImage.setImageResource(R.drawable.wrong);
-            fifthAnswerImage.setImageResource(R.drawable.wrong);
-
-
+            firstAnswerImage.setImageDrawable(null);
+            secondAnswerImage.setImageDrawable(null);
+            thirdAnswerImage.setImageDrawable(null);
+            fourthAnswerImage.setImageDrawable(null);
+            fifthAnswerImage.setImageDrawable(null);
         }
 
         private ImageView getAnswerImage(int answer) {
@@ -130,15 +121,14 @@ public class RecycleViewAdapter
             }
         }
 
-        private void setCardViewColor() {
-            if (isQuestionAnsweredRight) {
+        private void setCardViewColor(Question question) {
+            if (question.isAnswered()) {
                 cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
                         R.color.rightCardColor));
             } else {
                 cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
                         R.color.wrongCardColor));
             }
-
         }
     }
 }

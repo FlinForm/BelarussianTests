@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.Quiz;
@@ -33,6 +35,19 @@ public class ResultsActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        TextView correctResults = (TextView) findViewById(R.id.correctResultsTextView);
+        correctResults.setText(getString(R.string.results_text)
+                + " "
+                + Quiz.getCorrectAnswers()
+                + "/"
+                + Quiz.getQuestions().size());
+
+        TextView time = (TextView) findViewById(R.id.resultsTimeTextView);
+        time.setText(Quiz.getTime());
+
+        View button = findViewById(R.id.resultsReturnButton);
+        button.setOnClickListener(event -> finish());
     }
 
     @Override

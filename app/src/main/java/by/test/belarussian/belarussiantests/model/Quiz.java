@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Quiz {
-    private static DateFormat formatter = new SimpleDateFormat("mm:ss");
+    private static final DateFormat formatter = new SimpleDateFormat("mm:ss");
     private static String name;
     private static long time;
     private static int correctAnswers;
@@ -38,11 +38,25 @@ public class Quiz {
         Quiz.questions = questions;
     }
 
-    public static int getCorrectAnswers() {
-        return correctAnswers;
+    public static void checkQuestionAnswers() {
+        for (Question question : questions) {
+            for (Question.Answer answer : question.getAnswers()) {
+                if (answer.isCorrect() != answer.isSelected()) {
+                    question.setAnswered(false);
+                    break;
+                } else {
+                    question.setAnswered(true);
+                }
+            }
+        }
     }
 
-    public static void addCorrectAnswer() {
-        correctAnswers++;
+    public static int getCorrectAnswers() {
+        for (int i = 0; i < questions.size(); i++) {
+            if (questions.get(i).isAnswered()) {
+                correctAnswers++;
+            }
+        }
+        return correctAnswers;
     }
 }

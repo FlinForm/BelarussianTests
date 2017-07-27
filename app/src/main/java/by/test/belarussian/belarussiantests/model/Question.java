@@ -1,15 +1,27 @@
 package by.test.belarussian.belarussiantests.model;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @JsonAutoDetect
 public class Question {
     private String question;
     private String subject;
 
-    public Answer[] answers;
+    @JsonIgnore
+    private boolean isAnswered = false;
+
+    private Answer[] answers;
 
     public Question() {
+    }
+
+    public boolean isAnswered() {
+        return isAnswered;
+    }
+
+    public void setAnswered(boolean answered) {
+        isAnswered = answered;
     }
 
     public String getQuestion() {
@@ -34,15 +46,6 @@ public class Question {
 
     public void setSubject(String subject) {
         this.subject = subject;
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "question='" + question + '\'' +
-                ", subject='" + subject + '\'' +
-                ", answers=" + answers +
-                '}';
     }
 
     @JsonAutoDetect
