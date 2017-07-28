@@ -39,12 +39,12 @@ public class ResultsActivity extends AppCompatActivity {
         TextView correctResults = (TextView) findViewById(R.id.correctResultsTextView);
         correctResults.setText(getString(R.string.results_text)
                 + " "
-                + Quiz.getCorrectAnswers()
+                + Quiz.getPlayer().getCorrectAnswers()
                 + "/"
                 + Quiz.getQuestions().size());
 
         TextView time = (TextView) findViewById(R.id.resultsTimeTextView);
-        time.setText(Quiz.getTime());
+        time.setText(Quiz.getPlayer().getTime());
 
         View button = findViewById(R.id.resultsReturnButton);
         button.setOnClickListener(event -> finish());

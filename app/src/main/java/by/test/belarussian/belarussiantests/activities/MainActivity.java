@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -33,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build());
     }
 
-    private final String SNACKBAR_TEXT = "Enter your name!";
-    private final int REQUEST_CODE = 13;
+    private final String SNACKBAR_TEXT_EMPTY = "Enter your name!";
+    private final String SNACKBAR_TEXT_LENGTH = "No more then 13 symbols";
 
     private AlertDialog.Builder builder;
-    private AlertDialog dialog;
+    private AlertDialog startDialog, resultsDialog;
     private EditText personName;
 
     @Override
@@ -47,14 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.dialog);
-        dialog = builder.create();
+        startDialog = builder.create();
+
+        builder.setView(R.layout.best_results);
+        resultsDialog = builder.create();
 
         parseJson();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -66,28 +65,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.startTestButton:
-                dialog.show();
+                startDialog.show();
                 break;
             case R.id.resultsButton:
+                resultsDialog.show();
+                String[] results = Quiz.getBestResults();
+                TextView name = (TextView) resultsDialog.findViewById(R.id.bestResultsName);
+                name.setText(results[0]);
+                TextView time = (TextView) resultsDialog.findViewById(R.id.bestResultsTime);
+                time.setText(results[1]);
+                TextView answers = (TextView) resultsDialog.findViewById(R.id.bestResultsAnswers);
+                answers.setText(results[2]);
                 break;
             case R.id.rulesButton:
+                Quiz.getBestResults();
                 break;
             case R.id.topicButton:
                 break;
             case R.id.dialogStartButton:
-                personName = (EditText) dialog.findViewById(R.id.nameEditText);
+                personName = (EditText) startDialog.findViewById(R.id.nameEditText);
                 assert personName != null;
                 if ("".equals(personName.getText().toString())) {
-                    Snackbar.make(v, SNACKBAR_TEXT, BaseTransientBottomBar.LENGTH_SHORT).show();
+                    Snackbar.make(v, SNACKBAR_TEXT_EMPTY, BaseTransientBottomBar.LENGTH_SHORT).show();
                     return;
                 }
-                Quiz.setName(personName.getText().toString());
-                Intent intent = new Intent(this, QuizActivity.class);
-                startActivityForResult(intent, REQUEST_CODE);
-                dialog.hide();
+                if (personName.getText().toString().length() > 13) {
+                    Snackbar.make(v, SNACKBAR_TEXT_LENGTH, BaseTransientBottomBar.LENGTH_SHORT).show();
+                    return;
+                }
+                parseJson();
+                Quiz.setPlayer(personName.getText().toString());
+                startActivity(new Intent(this, QuizActivity.class));
+                startDialog.hide();
                 break;
             case R.id.dialogCancelButton:
-                dialog.hide();
+                startDialog.hide();
         }
     }
 
@@ -103,12 +115,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             baos.close();
             inputStream.close();
-        } catch (IOException ignored) {
-        }
-        try {
             Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 }

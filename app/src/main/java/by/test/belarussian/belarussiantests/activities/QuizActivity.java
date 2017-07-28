@@ -57,10 +57,13 @@ public class QuizActivity extends AppCompatActivity
     public void onTestFinished(long endTime) {
         FrameLayout layout = (FrameLayout) findViewById(R.id.questionLayout);
         layout.removeAllViews();
-        Quiz.setTime(endTime - startTime);
 
-        Intent intent = new Intent(this, ResultsActivity.class);
-        startActivity(intent);
+        Quiz.getPlayer().setTime(endTime - startTime);
+        Quiz.checkQuestionAnswers();
+        Quiz.setBestPlayer();
+        Quiz.getPlayer().setCorrectAnswers();
+
+        startActivity(new Intent(this, ResultsActivity.class));
         finish();
     }
 }

@@ -116,7 +116,6 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.finishTestButton:
-                Quiz.checkQuestionAnswers();
                 listener.onTestFinished(System.currentTimeMillis());
                 break;
         }

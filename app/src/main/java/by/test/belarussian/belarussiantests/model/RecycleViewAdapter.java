@@ -38,9 +38,6 @@ public class RecycleViewAdapter
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.setAnswerImage(questions.get(position));
         holder.setCardViewColor(Quiz.getQuestions().get(position));
-        System.out.println(questions.get(position).isAnswered());
-        System.out.println(Quiz.getQuestions().get(position).isAnswered());
-
     }
 
     @Override
@@ -68,7 +65,6 @@ public class RecycleViewAdapter
             this.itemView = itemView;
 
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
-
             cardView = (CardView) itemView.findViewById(R.id.cardView);
 
             firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
