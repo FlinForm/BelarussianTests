@@ -44,7 +44,7 @@ public class ResultsActivity extends AppCompatActivity {
                 + Quiz.getQuestions().size());
 
         TextView time = (TextView) findViewById(R.id.resultsTimeTextView);
-        time.setText(Quiz.getPlayer().getTime());
+        time.setText(Quiz.getPlayer().getFormattedTime());
 
         View button = findViewById(R.id.resultsReturnButton);
         button.setOnClickListener(event -> finish());

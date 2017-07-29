@@ -2,6 +2,7 @@ package by.test.belarussian.belarussiantests.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -18,8 +19,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
+import by.test.belarussian.belarussiantests.model.Player;
 import by.test.belarussian.belarussiantests.model.Question;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -54,6 +57,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultsDialog = builder.create();
 
         parseJson();
+        readBestPlayers();
+    }
+
+    private void readBestPlayers() {
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        Map<String, ?> savedData = sharedPreferences.getAll();
+
+        for (Map.Entry<String, ?> savedPlayer : savedData.entrySet()) {
+            if (savedPlayer.getKey().startsWith("player")) {
+                String[] player = savedPlayer.getValue().toString().split(" ");
+
+                Player bestPlayer = new Player(player[0],
+                        Long.parseLong(player[1]),
+                        Integer.parseInt(player[2]));
+                System.out.println(bestPlayer.toString());
+                Quiz.bestPlayers.add(0, bestPlayer);
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        hideDialogs();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveBestPlayers();
+        Quiz.bestPlayers.clear();
     }
 
     @Override
@@ -94,13 +128,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return;
                 }
                 parseJson();
-                Quiz.setPlayer(personName.getText().toString());
+                Quiz.player = new Player(personName.getText().toString(), 0L, 0);
                 startActivity(new Intent(this, QuizActivity.class));
+                personName.setText("");
                 startDialog.hide();
                 break;
             case R.id.dialogCancelButton:
                 startDialog.hide();
         }
+    }
+
+    private void saveBestPlayers() {
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        for (int i = 0; i < Quiz.bestPlayers.size(); i++) {
+            if (Quiz.bestPlayers.get(i) != null) {
+                String player = Quiz.bestPlayers.get(i).getName()
+                        + " "
+                        + Quiz.bestPlayers.get(i).getTime()
+                        + " "
+                        + Quiz.bestPlayers.get(i).getCorrectAnswers();
+                editor.putString("player" + i, player);
+            }
+        }
+        editor.commit();
     }
 
     private void parseJson() {
@@ -118,5 +169,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
         } catch (IOException ignored) {
         }
+    }
+
+    private void hideDialogs() {
+        startDialog.hide();
+        resultsDialog.hide();
     }
 }
