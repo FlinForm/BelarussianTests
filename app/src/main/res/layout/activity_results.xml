@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/resultsReturnButton"
-            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:background="@drawable/selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
