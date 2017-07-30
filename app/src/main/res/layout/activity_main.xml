@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <LinearLayout
         android:id="@+id/buttonsLayout"
@@ -14,37 +15,37 @@
 
         <Button
             android:id="@+id/startTestButton"
-            android:background="@drawable/selector"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@drawable/selector"
             android:onClick="onClick"
             android:text="@string/start_test_button" />
 
         <Button
             android:id="@+id/topicButton"
-            android:background="@drawable/selector"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@drawable/selector"
             android:onClick="onClick"
             android:text="@string/topics_button" />
 
         <Button
             android:id="@+id/resultsButton"
-            android:background="@drawable/selector"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@drawable/selector"
             android:onClick="onClick"
             android:text="@string/best_results_button" />
 
         <Button
             android:id="@+id/rulesButton"
-            android:background="@drawable/selector"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@drawable/selector"
             android:onClick="onClick"
             android:text="@string/rules_button" />
     </LinearLayout>

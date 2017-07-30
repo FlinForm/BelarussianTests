@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/questionMainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -16,46 +18,60 @@
         <TextView
             android:id="@+id/questionNumber"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/question"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="ObsoleteLayoutParam" />
 
         <TextView
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
             android:gravity="center_vertical"
+            android:padding="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/firstAnswerCheckbox"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="5dp">
 
-        <CheckBox
-            android:id="@+id/secondAnswerCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/firstAnswerCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <CheckBox
-            android:id="@+id/thirdAnswerCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/secondAnswerCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <CheckBox
-            android:id="@+id/fourthAnswerCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/thirdAnswerCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <CheckBox
-            android:id="@+id/fifthAnswerCheckbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/fourthAnswerCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/fifthAnswerCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -63,7 +79,7 @@
         android:id="@+id/finishButtonLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp">
+        android:padding="10dp">
 
         <Button
             android:id="@+id/finishTestButton"

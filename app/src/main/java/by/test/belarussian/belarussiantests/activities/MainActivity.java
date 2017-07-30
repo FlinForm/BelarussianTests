@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         parseJson();
         readBestPlayers();
-        Quiz.getRandomQuestions(Quiz.interQuestions);
     }
 
     @Override
@@ -94,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.topicButton:
                 break;
             case R.id.dialogStartButton:
+                Quiz.testQuestions.clear();
+                Quiz.getRandomQuestions(Quiz.interQuestions);
                 EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
                 assert personName != null;
                 if ("".equals(personName.getText().toString())) {
