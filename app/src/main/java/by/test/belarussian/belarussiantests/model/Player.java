@@ -3,7 +3,7 @@ package by.test.belarussian.belarussiantests.model;
 import java.util.Date;
 
 public class Player {
-    private String name;
+    private final String name;
     private long time;
     private int correctAnswers;
 
@@ -35,20 +35,15 @@ public class Player {
     }
 
     public void setCorrectAnswers() {
-        for (int i = 0; i < Quiz.questions.size(); i++) {
-            if (Quiz.questions.get(i).isAnswered()) {
+        for (int i = 0; i < Quiz.testQuestions.size(); i++) {
+            if (Quiz.testQuestions.get(i).isAnswered()) {
                 correctAnswers++;
             }
         }
-        System.out.println("correct " + correctAnswers);
     }
 
     @Override
     public String toString() {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", time=" + time +
-                ", correctAnswers=" + correctAnswers +
-                '}';
+        return name + " " + time + " " + correctAnswers;
     }
 }

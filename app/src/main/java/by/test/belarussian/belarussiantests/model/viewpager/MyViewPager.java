@@ -24,11 +24,6 @@ public class MyViewPager extends ViewPager {
         return this.IsSwipeAllowed(ev) && super.onInterceptTouchEvent(ev);
     }
 
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-    }
-
     private boolean IsSwipeAllowed(MotionEvent event) {
         if (this.direction == Direction.ALL) {
             return true;

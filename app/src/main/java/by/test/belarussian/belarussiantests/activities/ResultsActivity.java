@@ -29,8 +29,7 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-
-        RecycleViewAdapter adapter = new RecycleViewAdapter(Quiz.getQuestions());
+        RecycleViewAdapter adapter = new RecycleViewAdapter(Quiz.getTestQuestions());
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -41,7 +40,7 @@ public class ResultsActivity extends AppCompatActivity {
                 + " "
                 + Quiz.getPlayer().getCorrectAnswers()
                 + "/"
-                + Quiz.getQuestions().size());
+                + Quiz.getTestQuestions().size());
 
         TextView time = (TextView) findViewById(R.id.resultsTimeTextView);
         time.setText(Quiz.getPlayer().getFormattedTime());

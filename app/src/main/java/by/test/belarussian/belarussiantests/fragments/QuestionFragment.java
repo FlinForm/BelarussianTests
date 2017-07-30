@@ -54,26 +54,26 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         fragmentTitle.setText(getString(R.string.question_number) + (questionNumber + 1));
 
         TextView question = (TextView) view.findViewById(R.id.question);
-        question.setText(Quiz.getQuestions().get(questionNumber).getQuestion());
+        question.setText(Quiz.getTestQuestions().get(questionNumber).getQuestion());
 
         firstAnswer = (CheckBox) view.findViewById(R.id.firstAnswerCheckbox);
-        firstAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[0].getAnswer());
+        firstAnswer.setText(Quiz.getTestQuestions().get(questionNumber).getAnswers()[0].getAnswer());
         firstAnswer.setOnClickListener(this);
 
         secondAnswer = (CheckBox) view.findViewById(R.id.secondAnswerCheckbox);
-        secondAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[1].getAnswer());
+        secondAnswer.setText(Quiz.getTestQuestions().get(questionNumber).getAnswers()[1].getAnswer());
         secondAnswer.setOnClickListener(this);
 
         thirdAnswer = (CheckBox) view.findViewById(R.id.thirdAnswerCheckbox);
-        thirdAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[2].getAnswer());
+        thirdAnswer.setText(Quiz.getTestQuestions().get(questionNumber).getAnswers()[2].getAnswer());
         thirdAnswer.setOnClickListener(this);
 
         fourthAnswer = (CheckBox) view.findViewById(R.id.fourthAnswerCheckbox);
-        fourthAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[3].getAnswer());
+        fourthAnswer.setText(Quiz.getTestQuestions().get(questionNumber).getAnswers()[3].getAnswer());
         fourthAnswer.setOnClickListener(this);
 
         fifthAnswer = (CheckBox) view.findViewById(R.id.fifthAnswerCheckbox);
-        fifthAnswer.setText(Quiz.getQuestions().get(questionNumber).getAnswers()[4].getAnswer());
+        fifthAnswer.setText(Quiz.getTestQuestions().get(questionNumber).getAnswers()[4].getAnswer());
         fifthAnswer.setOnClickListener(this);
     }
 
@@ -82,37 +82,37 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.firstAnswerCheckbox:
                 if (firstAnswer.isChecked()) {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[0].setSelected(true);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[0].setSelected(true);
                 } else {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[0].setSelected(false);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[0].setSelected(false);
                 }
                 break;
             case R.id.secondAnswerCheckbox:
                 if (secondAnswer.isChecked()) {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[1].setSelected(true);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[1].setSelected(true);
                 } else {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[1].setSelected(false);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[1].setSelected(false);
                 }
                 break;
             case R.id.thirdAnswerCheckbox:
                 if (thirdAnswer.isChecked()) {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[2].setSelected(true);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[2].setSelected(true);
                 } else {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[2].setSelected(false);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[2].setSelected(false);
                 }
                 break;
             case R.id.fourthAnswerCheckbox:
                 if (fourthAnswer.isChecked()) {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[3].setSelected(true);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[3].setSelected(true);
                 } else {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[3].setSelected(false);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[3].setSelected(false);
                 }
                 break;
             case R.id.fifthAnswerCheckbox:
                 if (fifthAnswer.isChecked()) {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[4].setSelected(true);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[4].setSelected(true);
                 } else {
-                    Quiz.getQuestions().get(questionNumber).getAnswers()[4].setSelected(false);
+                    Quiz.getTestQuestions().get(questionNumber).getAnswers()[4].setSelected(false);
                 }
                 break;
             case R.id.finishTestButton:

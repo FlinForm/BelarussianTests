@@ -36,51 +36,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
+    private final String SHARED_PREFERENCES_KEY = "player";
 
-    private final String SNACKBAR_TEXT_EMPTY = "Enter your name!";
-    private final String SNACKBAR_TEXT_LENGTH = "No more then 13 symbols";
-
-    private AlertDialog.Builder builder;
-    private AlertDialog startDialog, resultsDialog;
-    private EditText personName;
+    private AlertDialog startDialog, resultsDialog, rulesDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.dialog);
         startDialog = builder.create();
 
         builder.setView(R.layout.best_results);
         resultsDialog = builder.create();
 
+        builder.setView(R.layout.rules);
+        rulesDialog = builder.create();
+
         parseJson();
         readBestPlayers();
-    }
-
-    private void readBestPlayers() {
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        Map<String, ?> savedData = sharedPreferences.getAll();
-
-        for (Map.Entry<String, ?> savedPlayer : savedData.entrySet()) {
-            if (savedPlayer.getKey().startsWith("player")) {
-                String[] player = savedPlayer.getValue().toString().split(" ");
-
-                Player bestPlayer = new Player(player[0],
-                        Long.parseLong(player[1]),
-                        Integer.parseInt(player[2]));
-                System.out.println(bestPlayer.toString());
-                Quiz.bestPlayers.add(0, bestPlayer);
-            }
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        hideDialogs();
+        Quiz.getRandomQuestions(Quiz.interQuestions);
     }
 
     @Override
@@ -112,19 +89,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 answers.setText(results[2]);
                 break;
             case R.id.rulesButton:
-                Quiz.getBestResults();
+                rulesDialog.show();
                 break;
             case R.id.topicButton:
                 break;
             case R.id.dialogStartButton:
-                personName = (EditText) startDialog.findViewById(R.id.nameEditText);
+                EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
                 assert personName != null;
                 if ("".equals(personName.getText().toString())) {
-                    Snackbar.make(v, SNACKBAR_TEXT_EMPTY, BaseTransientBottomBar.LENGTH_SHORT).show();
+                    Snackbar.make(v,
+                            getString(R.string.name_warning),
+                            BaseTransientBottomBar.LENGTH_SHORT).show();
                     return;
                 }
                 if (personName.getText().toString().length() > 13) {
-                    Snackbar.make(v, SNACKBAR_TEXT_LENGTH, BaseTransientBottomBar.LENGTH_SHORT).show();
+                    Snackbar.make(v,
+                            getString(R.string.name_length_warning),
+                            BaseTransientBottomBar.LENGTH_SHORT).show();
                     return;
                 }
                 parseJson();
@@ -139,40 +120,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void saveBestPlayers() {
+        int listRange = 10;
+        if (Quiz.bestPlayers.size() < 10) {
+            listRange = Quiz.bestPlayers.size();
+        }
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        for (int i = 0; i < Quiz.bestPlayers.size(); i++) {
+        for (int i = 0; i < listRange; i++) {
             if (Quiz.bestPlayers.get(i) != null) {
-                String player = Quiz.bestPlayers.get(i).getName()
-                        + " "
-                        + Quiz.bestPlayers.get(i).getTime()
-                        + " "
-                        + Quiz.bestPlayers.get(i).getCorrectAnswers();
-                editor.putString("player" + i, player);
+                editor.putString(SHARED_PREFERENCES_KEY + i, Quiz.bestPlayers.get(i).toString());
             }
         }
-        editor.commit();
+        editor.apply();
+    }
+
+    private void readBestPlayers() {
+        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        Map<String, ?> savedData = sharedPreferences.getAll();
+
+        for (Map.Entry<String, ?> savedPlayer : savedData.entrySet()) {
+            if (savedPlayer.getKey().startsWith(SHARED_PREFERENCES_KEY)) {
+                String[] player = savedPlayer.getValue().toString().split(" ");
+                Quiz.bestPlayers.add(0, new Player(player[0],
+                        Long.parseLong(player[1]),
+                        Integer.parseInt(player[2])));
+            }
+        }
     }
 
     private void parseJson() {
         ObjectMapper mapper = new ObjectMapper();
         InputStream inputStream = getResources().openRawResource(R.raw.questions);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte buf[] = new byte[1024];
+        byte buffer[] = new byte[1024];
         int length;
         try {
-            while ((length = inputStream.read(buf)) != -1) {
-                baos.write(buf, 0, length);
+            while ((length = inputStream.read(buffer)) != -1) {
+                baos.write(buffer, 0, length);
             }
             baos.close();
             inputStream.close();
-            Quiz.questions = mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
+            Quiz.interQuestions =
+                    mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
         } catch (IOException ignored) {
         }
-    }
-
-    private void hideDialogs() {
-        startDialog.hide();
-        resultsDialog.hide();
     }
 }

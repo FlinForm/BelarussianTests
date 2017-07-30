@@ -98,5 +98,105 @@
       {"answer": "час...піс", "correct": false, "selected": false},
       {"answer": "адн...разовы", "correct": true, "selected": false},
       {"answer": "кін...герой", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішацца прыстаўная галосная:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "коні за…ржалі", "correct": false, "selected": false},
+      {"answer": "…рваліся на волю", "correct": true, "selected": false},
+      {"answer": "няма …опраткі", "correct": false, "selected": false},
+      {"answer": "узгорак …льдзісты", "correct": true, "selected": false},
+      {"answer": "тын …мшалы", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прыстаўная (устаўная) галосная не пішацца:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "вока…мгненна", "correct": true, "selected": false},
+      {"answer": "…ржанне", "correct": false, "selected": false},
+      {"answer": "за…мглёны", "correct": true, "selected": false},
+      {"answer": "балотнай …ржой", "correct": false, "selected": false},
+      {"answer": "на …ржэўніку", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх пішуцца прыстаўныя зычныя:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "…ультыматум", "correct": false, "selected": false},
+      {"answer": "…одбліск", "correct": true, "selected": false},
+      {"answer": "…этакі", "correct": true, "selected": false},
+      {"answer": "…омскі", "correct": false, "selected": false},
+      {"answer": "…усмятку", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прыстаўныя (устаўныя) зычныя не пішуцца:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "…уюн", "correct": true, "selected": false},
+      {"answer": "…обмацкам", "correct": false, "selected": false},
+      {"answer": "…анна", "correct": false, "selected": false},
+      {"answer": "…ачыма", "correct": false, "selected": false},
+      {"answer": "…іронія", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прапушчана літара ў (нескладовае):",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "сала…і", "correct": true, "selected": false},
+      {"answer": "ва…торна", "correct": false, "selected": false},
+      {"answer": "ва …ладзівастоку", "correct": false, "selected": false},
+      {"answer": "ла…рэат", "correct": true, "selected": false},
+      {"answer": "ба…кон", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прапушчана літара у (складовае):",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "бра…нінг", "correct": false, "selected": false},
+      {"answer": "прэзіды…м", "correct": true, "selected": false},
+      {"answer": "удвая-…трая", "correct": false, "selected": false},
+      {"answer": "Ланда…", "correct": true, "selected": false},
+      {"answer": "новая …рна", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх замест пропускаў пішацца літара ы:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "без…ніцыятыўны", "correct": true, "selected": false},
+      {"answer": "між…рыгацыйны", "correct": false, "selected": false},
+      {"answer": "аб…граць", "correct": true, "selected": false},
+      {"answer": "пад…граць", "correct": true, "selected": false},
+      {"answer": "контр…гра", "correct": false, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, напісаныя без арфаграфічных памылак:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "безіменны", "correct": false, "selected": false},
+      {"answer": "абыйсці", "correct": false, "selected": false},
+      {"answer": "праіснаваць", "correct": true, "selected": false},
+      {"answer": "выйгрышны", "correct": true, "selected": false},
+      {"answer": "заінтрыгаваць", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прапушчана літара й:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "за…здросны", "correct": true, "selected": false},
+      {"answer": "па…менна", "correct": true, "selected": false},
+      {"answer": "сы…шоў", "correct": false, "selected": false},
+      {"answer": "за…рдзецца", "correct": false, "selected": false},
+      {"answer": "за…мальны", "correct": true, "selected": false}
+    ]},
+  {
+    "question" : "Адзначце словы, у якіх прапушчана літара і:",
+    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "answers": [
+      {"answer": "звыш…мклівы", "correct": false, "selected": false},
+      {"answer": "пра…снаваць", "correct": true, "selected": false},
+      {"answer": "гіпер…нфляцыя", "correct": true, "selected": false},
+      {"answer": "сан…нструктар", "correct": true, "selected": false},
+      {"answer": "суб…нспектар", "correct": true, "selected": false}
     ]}
   ]

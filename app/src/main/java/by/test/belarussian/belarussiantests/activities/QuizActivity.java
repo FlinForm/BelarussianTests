@@ -26,14 +26,13 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private long startTime;
-    private MyViewPager viewPager;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        viewPager = (MyViewPager) findViewById(R.id.viewPager);
+        MyViewPager viewPager = (MyViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
         viewPager.setAllowedSwipeDirection(MyViewPager.Direction.RIGHT);
 

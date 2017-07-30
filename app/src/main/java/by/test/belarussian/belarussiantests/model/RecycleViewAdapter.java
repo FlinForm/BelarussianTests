@@ -37,7 +37,7 @@ public class RecycleViewAdapter
         holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.setAnswerImage(questions.get(position));
-        holder.setCardViewColor(Quiz.getQuestions().get(position));
+        holder.setCardViewColor(Quiz.getTestQuestions().get(position));
     }
 
     @Override

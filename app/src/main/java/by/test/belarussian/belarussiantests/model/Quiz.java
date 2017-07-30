@@ -3,26 +3,28 @@ package by.test.belarussian.belarussiantests.model;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Quiz {
     protected static final DateFormat formatter = new SimpleDateFormat("mm:ss");
-    public static List<Player> bestPlayers = new ArrayList<>();
-    public static List<Question> questions;
+    public static final List<Player> bestPlayers = new ArrayList<>();
+    public static List<Question> testQuestions = new ArrayList<>(10);
     public static Player player;
 
+    public static List<Question> interQuestions;
 
     public static Player getPlayer() {
         return player;
     }
 
-    public static List<Question> getQuestions() {
-        return questions;
+    public static List<Question> getTestQuestions() {
+        return testQuestions;
     }
 
     public static void checkQuestionAnswers() {
-        for (Question question : questions) {
+        for (Question question : testQuestions) {
             for (Question.Answer answer : question.getAnswers()) {
                 if (answer.isCorrect() != answer.isSelected()) {
                     question.setAnswered(false);
@@ -35,15 +37,15 @@ public class Quiz {
     }
 
     public static void setBestPlayer() {
-        int arrayBounds = 10;
+        int listRange = 10;
         if (bestPlayers.size() < 10) {
-            arrayBounds = bestPlayers.size();
+            listRange = bestPlayers.size();
         }
         if (player.getCorrectAnswers() == 0) {
             return;
         }
 
-        for (int i = 0; i < arrayBounds; i++) {
+        for (int i = 0; i < listRange; i++) {
             if (bestPlayers.get(i).getCorrectAnswers() < player.getCorrectAnswers()) {
                 bestPlayers.add(i, player);
                 return;
@@ -77,5 +79,16 @@ public class Quiz {
             results[2] = results[2].substring(0, results[2].length() - 1);
         }
         return results;
+    }
+
+    public static void getRandomQuestions(List<Question> questionList) {
+        Set<Integer> numbers = new HashSet<>();
+        do {
+           numbers.add((int) (Math.random() * questionList.size()));
+        } while (numbers.size() < 10);
+
+        for (Integer number : numbers) {
+            testQuestions.add(questionList.get(number));
+        }
     }
 }

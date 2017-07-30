@@ -10,11 +10,8 @@ public class Question {
 
     @JsonIgnore
     private boolean isAnswered = false;
-
     private Answer[] answers;
-
-    public Question() {
-    }
+    public Question() {}
 
     public boolean isAnswered() {
         return isAnswered;
@@ -26,10 +23,6 @@ public class Question {
 
     public String getQuestion() {
         return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
     }
 
     public Answer[] getAnswers() {

@@ -12,4 +12,13 @@
     <string name="topics_button">Topics</string>
     <string name="best_results_button">Best Results</string>
     <string name="rules_button">Rules</string>
+    <string name="name_warning">Enter your name!</string>
+    <string name="name_length_warning">No more than 13 symbols</string>
+    <string name="rules">
+         First line \n
+        Second line \n
+        Third line \n
+        Fourth line
+    </string>
+    <string name="rules_header_text">Rules:</string>
 </resources>
