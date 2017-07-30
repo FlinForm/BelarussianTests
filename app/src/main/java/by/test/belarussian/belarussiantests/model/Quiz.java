@@ -44,7 +44,6 @@ public class Quiz {
         if (player.getCorrectAnswers() == 0) {
             return;
         }
-
         for (int i = 0; i < listRange; i++) {
             if (bestPlayers.get(i).getCorrectAnswers() < player.getCorrectAnswers()) {
                 bestPlayers.add(i, player);
