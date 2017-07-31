@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 editor.putString(SHARED_PREFERENCES_KEY + i, Quiz.bestPlayers.get(i).toString());
             }
         }
-        editor.apply();
+        editor.commit();
     }
 
     private void readBestPlayers() {
