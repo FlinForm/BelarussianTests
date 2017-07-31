@@ -119,11 +119,11 @@ public class RecycleViewAdapter
 
         private void setCardViewColor(Question question) {
             if (question.isAnswered()) {
-                cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
-                        R.color.rightCardColor));
+                cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
+                        R.drawable.border_green));
             } else {
-                cardView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(),
-                        R.color.wrongCardColor));
+                cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
+                        R.drawable.border_red));
             }
         }
     }
