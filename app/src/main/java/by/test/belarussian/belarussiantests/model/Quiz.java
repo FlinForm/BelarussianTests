@@ -37,26 +37,9 @@ public class Quiz {
     }
 
     public static void setBestPlayer() {
-        int listRange = 10;
-        if (bestPlayers.size() < 10) {
-            listRange = bestPlayers.size();
+        if (player.getCorrectAnswers() > 0) {
+            bestPlayers.add(player);
         }
-        if (player.getCorrectAnswers() == 0) {
-            return;
-        }
-        for (int i = 0; i < listRange; i++) {
-            if (bestPlayers.get(i).getCorrectAnswers() < player.getCorrectAnswers()) {
-                bestPlayers.add(i, player);
-                return;
-            }
-            if (bestPlayers.get(i).getCorrectAnswers() == player.getCorrectAnswers()) {
-                if (bestPlayers.get(i).getTime() > player.getTime()) {
-                    bestPlayers.add(i, player);
-                    return;
-                }
-            }
-        }
-        bestPlayers.add(player);
     }
 
     public static String[] getBestResults() {
@@ -89,5 +72,18 @@ public class Quiz {
         for (Integer number : numbers) {
             testQuestions.add(questionList.get(number));
         }
+    }
+
+    public static boolean getPosition() {
+        int arrayBounds = 10;
+        if (bestPlayers.size() < 10) {
+            arrayBounds = bestPlayers.size();
+        }
+        for (int i = 0; i < arrayBounds; i++) {
+            if (bestPlayers.get(i).equals(player)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -41,6 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AlertDialog startDialog, resultsDialog, rulesDialog;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        readBestPlayers();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -56,14 +63,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rulesDialog = builder.create();
 
         parseJson();
-        readBestPlayers();
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onPause() {
+        super.onPause();
         saveBestPlayers();
         Quiz.bestPlayers.clear();
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     @Override
@@ -79,12 +89,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.resultsButton:
                 resultsDialog.show();
+                Collections.sort(Quiz.bestPlayers);
                 String[] results = Quiz.getBestResults();
                 TextView name = (TextView) resultsDialog.findViewById(R.id.bestResultsName);
+                assert name != null;
                 name.setText(results[0]);
                 TextView time = (TextView) resultsDialog.findViewById(R.id.bestResultsTime);
+                assert time != null;
                 time.setText(results[1]);
                 TextView answers = (TextView) resultsDialog.findViewById(R.id.bestResultsAnswers);
+                assert answers != null;
                 answers.setText(results[2]);
                 break;
             case R.id.rulesButton:
@@ -94,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dialogStartButton:
                 Quiz.testQuestions.clear();
+                Collections.shuffle(Quiz.interQuestions);
                 Quiz.getRandomQuestions(Quiz.interQuestions);
                 EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
                 assert personName != null;
@@ -142,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (Map.Entry<String, ?> savedPlayer : savedData.entrySet()) {
             if (savedPlayer.getKey().startsWith(SHARED_PREFERENCES_KEY)) {
                 String[] player = savedPlayer.getValue().toString().split(" ");
-                Quiz.bestPlayers.add(0, new Player(player[0],
+                Quiz.bestPlayers.add(new Player(player[0],
                         Long.parseLong(player[1]),
                         Integer.parseInt(player[2])));
             }

@@ -1,8 +1,10 @@
 package by.test.belarussian.belarussiantests.model;
 
+import android.support.annotation.NonNull;
+
 import java.util.Date;
 
-public class Player {
+public class Player implements Comparable<Player> {
     private final String name;
     private long time;
     private int correctAnswers;
@@ -40,6 +42,22 @@ public class Player {
                 correctAnswers++;
             }
         }
+    }
+
+    @Override
+    public int compareTo(@NonNull Player player) {
+        if (this.getCorrectAnswers() > player.getCorrectAnswers()) {
+                return -1;
+            } else if (this.getCorrectAnswers() < player.getCorrectAnswers()) {
+            return 1;
+        } else if (this.getCorrectAnswers() == player.getCorrectAnswers()) {
+            if (this.getTime() > player.getTime()) {
+                return 1;
+            } else if (this.getTime() < player.getTime()) {
+                return -1;
+            }
+        }
+        return 0;
     }
 
     @Override

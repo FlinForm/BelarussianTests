@@ -3,6 +3,7 @@ package by.test.belarussian.belarussiantests.activities;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,6 +48,12 @@ public class ResultsActivity extends AppCompatActivity {
 
         View button = findViewById(R.id.resultsReturnButton);
         button.setOnClickListener(event -> finish());
+
+        if (Quiz.bestPlayers.contains(Quiz.getPlayer()) && Quiz.getPosition()) {
+            Snackbar.make(getWindow().getDecorView().getRootView(),
+                    R.string.perform_best_result,
+                    Snackbar.LENGTH_LONG).show();
+        }
     }
 
     @Override

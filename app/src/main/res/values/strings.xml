@@ -1,24 +1,25 @@
 <resources>
     <string name="app_name">BelarussianTests</string>
     <string name="question_number">Пытанне №</string>
-    <string name="results_text">Questions answered: </string>
-    <string name="return_button_text">Return</string>
+    <string name="results_text">Question: </string>
+    <string name="return_button_text">Вярнуцца</string>
     <string name="enter_your_name">Enter your name:</string>
     <string name="name_hint">name</string>
-    <string name="cancel_button">cancel</string>
-    <string name="start_button">start</string>
-    <string name="finish_test_button">finish test</string>
-    <string name="start_test_button">Start test</string>
-    <string name="topics_button">Topics</string>
-    <string name="best_results_button">Best Results</string>
-    <string name="rules_button">Rules</string>
+    <string name="cancel_button">Вярнуцца</string>
+    <string name="start_button">Пачаць тэст</string>
+    <string name="finish_test_button">Закончыць тэст</string>
+    <string name="start_test_button">Пачаць тэст</string>
+    <string name="topics_button">Тэмы</string>
+    <string name="best_results_button">Лепшыя рэзультаты</string>
+    <string name="rules_button">Правилы</string>
     <string name="name_warning">Enter your name!</string>
     <string name="name_length_warning">No more than 13 symbols</string>
     <string name="rules">
-         First line \n
+        First line \n
         Second line \n
         Third line \n
         Fourth line
     </string>
-    <string name="rules_header_text">Rules:</string>
+    <string name="rules_header_text">Правилы:</string>
+    <string name="perform_best_result">Вы папали у списак лепшых рэзультатау</string>
 </resources>
