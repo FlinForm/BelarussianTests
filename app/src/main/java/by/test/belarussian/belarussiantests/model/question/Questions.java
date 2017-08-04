@@ -1,8 +1,7 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.model.question;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Questions {
     private List<Question> questions;

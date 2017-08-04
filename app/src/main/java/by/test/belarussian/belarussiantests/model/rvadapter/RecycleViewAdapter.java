@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.model.rvadapter;
 
 import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import by.test.belarussian.belarussiantests.R;
+import by.test.belarussian.belarussiantests.model.question.Question;
+import by.test.belarussian.belarussiantests.model.Quiz;
 
 public class RecycleViewAdapter
         extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {

@@ -24,8 +24,8 @@ import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.Player;
-import by.test.belarussian.belarussiantests.model.Question;
-import by.test.belarussian.belarussiantests.model.Questions;
+import by.test.belarussian.belarussiantests.model.question.Question;
+import by.test.belarussian.belarussiantests.model.question.Questions;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;

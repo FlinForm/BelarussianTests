@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.Quiz;
-import by.test.belarussian.belarussiantests.model.RecycleViewAdapter;
+import by.test.belarussian.belarussiantests.model.rvadapter.RecycleViewAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 

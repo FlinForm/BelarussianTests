@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.model.question;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
