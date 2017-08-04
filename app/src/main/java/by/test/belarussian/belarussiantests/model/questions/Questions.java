@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model.question;
+package by.test.belarussian.belarussiantests.model.questions;
 
 import java.util.ArrayList;
 import java.util.List;

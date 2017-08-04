@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import by.test.belarussian.belarussiantests.model.question.Question;
+import by.test.belarussian.belarussiantests.model.questions.Question;
 
 public class Quiz {
     protected static final DateFormat formatter = new SimpleDateFormat("mm:ss");

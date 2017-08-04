@@ -1,10 +1,10 @@
-package by.test.belarussian.belarussiantests.model.question;
+package by.test.belarussian.belarussiantests.model.questions;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * Used to build question model with answers, when parsing *.json
+ * Used to build fragment_question model with answers, when parsing *.json
  * !!! Do not delete unused fields and methods !!!
  */
 

@@ -24,8 +24,8 @@ import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.Player;
-import by.test.belarussian.belarussiantests.model.question.Question;
-import by.test.belarussian.belarussiantests.model.question.Questions;
+import by.test.belarussian.belarussiantests.model.questions.Question;
+import by.test.belarussian.belarussiantests.model.questions.Questions;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
 
-        builder.setView(R.layout.best_results);
+        builder.setView(R.layout.best_results_dialog);
         resultsDialog = builder.create();
 
         builder.setView(R.layout.rules_dialog);

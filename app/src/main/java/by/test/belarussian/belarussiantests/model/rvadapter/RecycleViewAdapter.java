@@ -1,7 +1,5 @@
 package by.test.belarussian.belarussiantests.model.rvadapter;
 
-import android.graphics.Paint;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,15 +11,16 @@ import android.widget.TextView;
 import java.util.List;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.question.Question;
+import by.test.belarussian.belarussiantests.model.questions.Question;
 import by.test.belarussian.belarussiantests.model.Quiz;
 
-public class RecycleViewAdapter
-        extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
+public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
     private final List<Question> questions;
+    private final AdapterUtils adapterUtils;
 
     public RecycleViewAdapter(List<Question> questions) {
         this.questions = questions;
+        adapterUtils = new AdapterUtils();
     }
 
     @Override
@@ -32,16 +31,18 @@ public class RecycleViewAdapter
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
-        holder.setDefaultAnswerImage();
+        adapterUtils.setDefaultAnswerImage(holder.imageViews);
         holder.questionText.setText(questions.get(position).getQuestion());
         holder.textViews[0].setText(questions.get(position).getAnswers()[0].getAnswer());
         holder.textViews[1].setText(questions.get(position).getAnswers()[1].getAnswer());
         holder.textViews[2].setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.textViews[3].setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.textViews[4].setText(questions.get(position).getAnswers()[4].getAnswer());
-        holder.setAnswerImage(questions.get(position));
-        holder.setCardViewColor(Quiz.getTestQuestions().get(position));
-        holder.strikeThroughTextViews(questions.get(position));
+        adapterUtils.setAnswerImage(questions.get(position), holder.imageViews);
+        adapterUtils.setCardViewColor(Quiz.getTestQuestions().get(position),
+                holder.cardView,
+                holder.itemView);
+        adapterUtils.strikeThroughTextViews(questions.get(position), holder.textViews);
     }
 
     @Override
@@ -63,8 +64,8 @@ public class RecycleViewAdapter
             textViews = new TextView[5];
             imageViews = new ImageView[5];
 
-            questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
             cardView = (CardView) itemView.findViewById(R.id.cardView);
+            questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
 
             textViews[0] = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
             textViews[1] = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
@@ -77,52 +78,6 @@ public class RecycleViewAdapter
             imageViews[2] = (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
             imageViews[3] = (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
             imageViews[4] = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
-        }
-
-        void setAnswerImage(Question question) {
-            for (int i = 0; i < imageViews.length; i++) {
-                if (question.getAnswers()[i].isCorrect()) {
-                    if (question.getAnswers()[i].isSelected()) {
-                        imageViews[i].setImageResource(R.drawable.right);
-                    } else {
-                        imageViews[i].setImageResource(R.drawable.wrong);
-                    }
-                }
-            }
-        }
-
-        private void setDefaultAnswerImage() {
-            for (int i = 0; i < imageViews.length; i++) {
-                imageViews[i].setImageDrawable(null);
-            }
-        }
-
-        private void setCardViewColor(Question question) {
-            if (question.isAnswered()) {
-                cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
-                        R.drawable.border_green));
-            } else {
-                cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
-                        R.drawable.border_red));
-            }
-        }
-
-        private void strikeThroughTextViews(Question question) {
-            if (!question.getAnswers()[0].isCorrect() && question.getAnswers()[0].isSelected()) {
-                textViews[0].setPaintFlags(textViews[0].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
-            if (!question.getAnswers()[1].isCorrect() && question.getAnswers()[1].isSelected()) {
-                textViews[1].setPaintFlags(textViews[2].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
-            if (!question.getAnswers()[2].isCorrect() && question.getAnswers()[2].isSelected()) {
-                textViews[2].setPaintFlags(textViews[2].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
-            if (!question.getAnswers()[3].isCorrect() && question.getAnswers()[3].isSelected()) {
-                textViews[3].setPaintFlags(textViews[3].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
-            if (!question.getAnswers()[4].isCorrect() && question.getAnswers()[4].isSelected()) {
-                textViews[4].setPaintFlags(textViews[4].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
         }
     }
 }

@@ -31,7 +31,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.question, container, false);
+        return inflater.inflate(R.layout.fragment_question, container, false);
     }
 
     @Override
