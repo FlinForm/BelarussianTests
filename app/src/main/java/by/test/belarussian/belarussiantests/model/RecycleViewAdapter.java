@@ -32,11 +32,11 @@ public class RecycleViewAdapter
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         holder.setDefaultAnswerImage();
         holder.questionText.setText(questions.get(position).getQuestion());
-        holder.firstAnswer.setText(questions.get(position).getAnswers()[0].getAnswer());
-        holder.secondAnswer.setText(questions.get(position).getAnswers()[1].getAnswer());
-        holder.thirdAnswer.setText(questions.get(position).getAnswers()[2].getAnswer());
-        holder.fourthAnswer.setText(questions.get(position).getAnswers()[3].getAnswer());
-        holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
+        holder.textViews[0].setText(questions.get(position).getAnswers()[0].getAnswer());
+        holder.textViews[1].setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.textViews[2].setText(questions.get(position).getAnswers()[2].getAnswer());
+        holder.textViews[3].setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.textViews[4].setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.setAnswerImage(questions.get(position));
         holder.setCardViewColor(Quiz.getTestQuestions().get(position));
         holder.strikeThroughTextViews(questions.get(position));
@@ -47,18 +47,10 @@ public class RecycleViewAdapter
         return questions.size();
     }
 
-    public static class ItemViewHolder extends RecyclerView.ViewHolder {
+    public static class ItemViewHolder extends RecyclerView.ViewHolder  {
         private final TextView questionText;
-        private final TextView firstAnswer;
-        private final TextView secondAnswer;
-        private final TextView thirdAnswer;
-        private final TextView fourthAnswer;
-        private final TextView fifthAnswer;
-        private final ImageView firstAnswerImage;
-        private final ImageView secondAnswerImage;
-        private final ImageView thirdAnswerImage;
-        private final ImageView fourthAnswerImage;
-        private final ImageView fifthAnswerImage;
+        private final TextView[] textViews;
+        private final ImageView[] imageViews;
         private final CardView cardView;
         private final View itemView;
 
@@ -66,56 +58,40 @@ public class RecycleViewAdapter
             super(itemView);
             this.itemView = itemView;
 
+            textViews = new TextView[5];
+            imageViews = new ImageView[5];
+
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
             cardView = (CardView) itemView.findViewById(R.id.cardView);
 
-            firstAnswer = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
-            secondAnswer = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
-            thirdAnswer = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
-            fourthAnswer = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
-            fifthAnswer = (TextView) itemView.findViewById(R.id.cardFifthAnswerText);
+            textViews[0] = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
+            textViews[1] = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
+            textViews[2] = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
+            textViews[3] = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
+            textViews[4] = (TextView) itemView.findViewById(R.id.cardFifthAnswerText);
 
-            firstAnswerImage = (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
-            secondAnswerImage = (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
-            thirdAnswerImage = (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
-            fourthAnswerImage = (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
-            fifthAnswerImage = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
+            imageViews[0] = (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
+            imageViews[1] = (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
+            imageViews[2] = (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
+            imageViews[3] = (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
+            imageViews[4] = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
         }
 
         void setAnswerImage(Question question) {
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < imageViews.length; i++) {
                 if (question.getAnswers()[i].isCorrect()) {
                     if (question.getAnswers()[i].isSelected()) {
-                        getAnswerImage(i).setImageResource(R.drawable.right);
+                        imageViews[i].setImageResource(R.drawable.right);
                     } else {
-                        getAnswerImage(i).setImageResource(R.drawable.wrong);
+                        imageViews[i].setImageResource(R.drawable.wrong);
                     }
                 }
             }
         }
 
         private void setDefaultAnswerImage() {
-            firstAnswerImage.setImageDrawable(null);
-            secondAnswerImage.setImageDrawable(null);
-            thirdAnswerImage.setImageDrawable(null);
-            fourthAnswerImage.setImageDrawable(null);
-            fifthAnswerImage.setImageDrawable(null);
-        }
-
-        private ImageView getAnswerImage(int answer) {
-            switch (answer) {
-                case 0:
-                    return firstAnswerImage;
-                case 1:
-                    return secondAnswerImage;
-                case 2:
-                    return thirdAnswerImage;
-                case 3:
-                    return fourthAnswerImage;
-                case 4:
-                    return fifthAnswerImage;
-                default:
-                    return null;
+            for (int i = 0; i < imageViews.length; i++) {
+                imageViews[i].setImageDrawable(null);
             }
         }
 
@@ -131,19 +107,19 @@ public class RecycleViewAdapter
 
         private void strikeThroughTextViews(Question question) {
             if (!question.getAnswers()[0].isCorrect() && question.getAnswers()[0].isSelected()) {
-                firstAnswer.setPaintFlags(firstAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                textViews[0].setPaintFlags(textViews[0].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
             if (!question.getAnswers()[1].isCorrect() && question.getAnswers()[1].isSelected()) {
-                secondAnswer.setPaintFlags(secondAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                textViews[1].setPaintFlags(textViews[2].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
             if (!question.getAnswers()[2].isCorrect() && question.getAnswers()[2].isSelected()) {
-                thirdAnswer.setPaintFlags(thirdAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                textViews[2].setPaintFlags(textViews[2].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
             if (!question.getAnswers()[3].isCorrect() && question.getAnswers()[3].isSelected()) {
-                fourthAnswer.setPaintFlags(fourthAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                textViews[3].setPaintFlags(textViews[3].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
             if (!question.getAnswers()[4].isCorrect() && question.getAnswers()[4].isSelected()) {
-                fifthAnswer.setPaintFlags(fifthAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                textViews[4].setPaintFlags(textViews[4].getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
         }
     }
