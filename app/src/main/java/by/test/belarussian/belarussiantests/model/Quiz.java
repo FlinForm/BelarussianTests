@@ -13,8 +13,6 @@ public class Quiz {
     public static List<Question> testQuestions = new ArrayList<>(10);
     public static Player player;
 
-    public static List<Question> interQuestions;
-
     public static Player getPlayer() {
         return player;
     }
@@ -44,17 +42,15 @@ public class Quiz {
 
     public static String[] getBestResults() {
         String[] results = {"", "", ""};
-        int arrayBounds = 10;
-        if (bestPlayers.size() < 10) {
+        int arrayBounds = 5;
+        if (bestPlayers.size() < 5) {
             arrayBounds = bestPlayers.size();
         }
-
         for (int i = 0; i < arrayBounds; i++) {
                 results[0] += bestPlayers.get(i).getName() + "\n";
                 results[1] += bestPlayers.get(i).getFormattedTime() + "\n";
                 results[2] += bestPlayers.get(i).getCorrectAnswers() + "\n";
         }
-
         if (results[0].length() > 0 && results[1].length() > 0 && results[2].length() > 0) {
             results[0] = results[0].substring(0, results[0].length() - 1);
             results[1] = results[1].substring(0, results[1].length() - 1);

@@ -4,11 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import by.test.belarussian.belarussiantests.R;
@@ -20,7 +19,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QuizActivity extends AppCompatActivity
-        implements QuestionFragment.OnTestFinishedListener {
+        implements QuestionFragment.OnTestFinishedListener, View.OnClickListener {
     private static final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
     static {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
@@ -28,12 +27,17 @@ public class QuizActivity extends AppCompatActivity
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
+    private AlertDialog finishTestDialog;
     private long startTime;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(R.layout.finish_text_dialog);
+        finishTestDialog = builder.create();
 
         MyViewPager viewPager = (MyViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
@@ -51,11 +55,24 @@ public class QuizActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+        finishTestDialog.show();
     }
 
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.finishDialogConfirmButton:
+                finishTestDialog.hide();
+                break;
+            case R.id.finishDialogExitButton:
+                finish();
+                break;
+        }
     }
 
     @Override

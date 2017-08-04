@@ -25,6 +25,7 @@ import java.util.Map;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.Player;
 import by.test.belarussian.belarussiantests.model.Question;
+import by.test.belarussian.belarussiantests.model.Questions;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final String SHARED_PREFERENCES_KEY = "player";
 
     private AlertDialog startDialog, resultsDialog, rulesDialog;
+    private Questions questions;
 
     @Override
     protected void onResume() {
@@ -53,16 +55,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(R.layout.dialog);
+        builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
 
         builder.setView(R.layout.best_results);
         resultsDialog = builder.create();
 
-        builder.setView(R.layout.rules);
+        builder.setView(R.layout.rules_dialog);
         rulesDialog = builder.create();
 
-        parseJson();
+        questions = new Questions();
+        parseJson(questions);
     }
 
     @Override
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        finish();
     }
 
     @Override
@@ -108,8 +112,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dialogStartButton:
                 Quiz.testQuestions.clear();
-                Collections.shuffle(Quiz.interQuestions);
-                Quiz.getRandomQuestions(Quiz.interQuestions);
+                Collections.shuffle(questions.getQuestions());
+                Quiz.getRandomQuestions(questions.getQuestions());
                 EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
                 assert personName != null;
                 if ("".equals(personName.getText().toString())) {
@@ -124,7 +128,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             BaseTransientBottomBar.LENGTH_SHORT).show();
                     return;
                 }
-                parseJson();
                 Quiz.player = new Player(personName.getText().toString(), 0L, 0);
                 startActivity(new Intent(this, QuizActivity.class));
                 personName.setText("");
@@ -136,8 +139,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void saveBestPlayers() {
-        int listRange = 10;
-        if (Quiz.bestPlayers.size() < 10) {
+        int listRange = 5;
+        if (Quiz.bestPlayers.size() < 5) {
             listRange = Quiz.bestPlayers.size();
         }
         SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
@@ -164,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void parseJson() {
+    private void parseJson(Questions questions) {
         ObjectMapper mapper = new ObjectMapper();
         InputStream inputStream = getResources().openRawResource(R.raw.questions);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -176,8 +179,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             baos.close();
             inputStream.close();
-            Quiz.interQuestions =
-                    mapper.readValue(baos.toString(), new TypeReference<List<Question>>(){});
+            questions.setQuestions(mapper.readValue(baos.toString(),
+                    new TypeReference<List<Question>>(){}));
         } catch (IOException ignored) {
         }
     }

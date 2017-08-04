@@ -3,6 +3,11 @@ package by.test.belarussian.belarussiantests.model;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * Used to build question model with answers, when parsing *.json
+ * !!! Do not delete unused fields and methods !!!
+ */
+
 @JsonAutoDetect
 public class Question {
     private String question;

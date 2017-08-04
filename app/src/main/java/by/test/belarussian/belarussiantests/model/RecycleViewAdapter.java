@@ -1,5 +1,6 @@
 package by.test.belarussian.belarussiantests.model;
 
+import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -38,6 +39,7 @@ public class RecycleViewAdapter
         holder.fifthAnswer.setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.setAnswerImage(questions.get(position));
         holder.setCardViewColor(Quiz.getTestQuestions().get(position));
+        holder.strikeThroughTextViews(questions.get(position));
     }
 
     @Override
@@ -124,6 +126,24 @@ public class RecycleViewAdapter
             } else {
                 cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
                         R.drawable.border_red));
+            }
+        }
+
+        private void strikeThroughTextViews(Question question) {
+            if (!question.getAnswers()[0].isCorrect() && question.getAnswers()[0].isSelected()) {
+                firstAnswer.setPaintFlags(firstAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (!question.getAnswers()[1].isCorrect() && question.getAnswers()[1].isSelected()) {
+                secondAnswer.setPaintFlags(secondAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (!question.getAnswers()[2].isCorrect() && question.getAnswers()[2].isSelected()) {
+                thirdAnswer.setPaintFlags(thirdAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (!question.getAnswers()[3].isCorrect() && question.getAnswers()[3].isSelected()) {
+                fourthAnswer.setPaintFlags(fourthAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (!question.getAnswers()[4].isCorrect() && question.getAnswers()[4].isSelected()) {
+                fifthAnswer.setPaintFlags(fifthAnswer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
         }
     }
