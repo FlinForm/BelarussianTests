@@ -36,9 +36,27 @@ public class Quiz {
         }
     }
 
-    public static void setBestPlayer() {
-        if (player.getCorrectAnswers() > 0) {
+    public static void resetSelectedAnswers() {
+        for (Question question : testQuestions) {
+            for (Question.Answer answer : question.getAnswers()) {
+                answer.setSelected(false);
+            }
+        }
+    }
+
+    public static void addBestPlayer() {
+        if (player.getCorrectAnswers() == 0) {
+            return;
+        }
+        if (bestPlayers.size() < 5) {
             bestPlayers.add(player);
+        } else {
+            for (int i = 0; i < 5; i++) {
+                if (bestPlayers.get(i).compareTo(player) > 0) {
+                    bestPlayers.add(player);
+                    return;
+                }
+            }
         }
     }
 

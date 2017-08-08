@@ -8,6 +8,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.PopupMenu;
+import android.text.method.ScrollingMovementMethod;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
+        Quiz.bestPlayers.clear();
         readBestPlayers();
     }
 
@@ -72,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onPause() {
         super.onPause();
         saveBestPlayers();
-        Quiz.bestPlayers.clear();
     }
 
     @Override
@@ -83,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -107,10 +117,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.rulesButton:
                 rulesDialog.show();
+                TextView textView = (TextView) rulesDialog.findViewById(R.id.rulesTextView);
+                textView.setMovementMethod(new ScrollingMovementMethod());
                 break;
             case R.id.topicButton:
+                PopupMenu popupMenu = new PopupMenu(this, v);
+                for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
+                    popupMenu.getMenu().add((String) entry.getKey());
+                }
+                popupMenu.show();
                 break;
             case R.id.dialogStartButton:
+                Quiz.resetSelectedAnswers();
                 Quiz.testQuestions.clear();
                 Collections.shuffle(questions.getQuestions());
                 Quiz.getRandomQuestions(questions.getQuestions());

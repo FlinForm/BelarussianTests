@@ -83,7 +83,7 @@ public class QuizActivity extends AppCompatActivity
         Quiz.getPlayer().setTime(endTime - startTime);
         Quiz.checkQuestionAnswers();
         Quiz.getPlayer().setCorrectAnswers();
-        Quiz.setBestPlayer();
+        Quiz.addBestPlayer();
 
         startActivity(new Intent(this, ResultsActivity.class));
         finish();

@@ -201,7 +201,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх прапушчана літара с",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "а…часлівіць сябра", "correct": false, "selected": false},
       {"answer": "ра…чыніць дзверы", "correct": true, "selected": false},
@@ -211,7 +211,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх прапушчана літара ш",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "са…чапіць рукі", "correct": true, "selected": false},
       {"answer": "ра…чуліць слухачоў", "correct": false, "selected": false},
@@ -221,7 +221,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх пішуцца літары дэ, д, ды",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "(дэ, дзе)партамент", "correct": true, "selected": false},
       {"answer": "па(д, дз)везці", "correct": true, "selected": false},
@@ -231,7 +231,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх пішацца літара дз",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "(дэ, дзе)рывацыйны", "correct": false, "selected": false},
       {"answer": "(ду, дзю)на", "correct": true, "selected": false},
@@ -241,7 +241,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх пішацца літара ц:",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "аван(цю, ту)рны", "correct": false, "selected": false},
       {"answer": "ла(ці, ты)нскі", "correct": true, "selected": false},
@@ -251,7 +251,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх пішацца літара т",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "(ці, ты)гровая", "correct": true, "selected": false},
       {"answer": "аўтары(це, тэ)тны", "correct": true, "selected": false},
@@ -261,7 +261,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх прапушчаны мяккі знак",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "кон..чыкі", "correct": false, "selected": false},
       {"answer": "голуб..", "correct": false, "selected": false},
@@ -271,7 +271,7 @@
     ]},
 	{
     "question" : "Адзначце словы, у якіх прапушчаны апостаф",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "раз..юшыцца", "correct": true, "selected": false},
       {"answer": "надвор..е", "correct": true, "selected": false},
@@ -281,7 +281,7 @@
     ]},
 	{
     "question" : "Адзначце словы, напісаныя без арфаграфічных памылак",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "нісчымніца", "correct": false, "selected": false},
       {"answer": "ін’екцыя", "correct": true, "selected": false},
@@ -291,7 +291,7 @@
     ]},
 	{
     "question" : "Адзначце словы, напісаныя з арфаграфічнымі памылкамі",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
     "answers": [
       {"answer": "тюлень", "correct": true, "selected": false},
       {"answer": "з’едліва", "correct": false, "selected": false},
