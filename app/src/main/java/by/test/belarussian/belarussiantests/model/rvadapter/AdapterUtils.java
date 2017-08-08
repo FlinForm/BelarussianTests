@@ -4,6 +4,7 @@ import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -40,11 +41,11 @@ public class AdapterUtils {
         }
     }
 
-    void strikeThroughTextViews(Question question, TextView[] textViews) {
+    void setCheckBoxes(Question question, CheckBox[] checkBoxes) {
         for (int i = 0; i < question.getAnswers().length; i++) {
-            if (!question.getAnswers()[i].isCorrect() && question.getAnswers()[i].isSelected()) {
-                textViews[i].setPaintFlags(textViews[i].getPaintFlags() |
-                        Paint.STRIKE_THRU_TEXT_FLAG);
+            checkBoxes[i].setClickable(false);
+            if (question.getAnswers()[i].isSelected()) {
+                checkBoxes[i].setChecked(true);
             }
         }
     }

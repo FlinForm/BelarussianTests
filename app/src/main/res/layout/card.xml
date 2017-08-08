@@ -44,7 +44,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cardFirstAnswerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
                     android:id="@+id/cardFirstAnswerImage"
@@ -52,12 +61,6 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="4dp" />
 
-                <TextView
-                    android:id="@+id/cardFirstAnswerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -65,7 +68,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cardSecondAnswerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
                     android:id="@+id/cardSecondAnswerImage"
@@ -73,12 +85,6 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="4dp" />
 
-                <TextView
-                    android:id="@+id/cardSecondAnswerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,7 +92,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cardThirdAnswerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
                     android:id="@+id/cardThirdAnswerImage"
@@ -94,12 +109,6 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="4dp" />
 
-                <TextView
-                    android:id="@+id/cardThirdAnswerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -107,7 +116,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cardFourthAnswerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
                     android:id="@+id/cardFourthAnswerImage"
@@ -115,32 +133,28 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="4dp" />
 
-                <TextView
-                    android:id="@+id/cardFourthAnswerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/cardFifthAnswerLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cardFifthAnswerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="" />
 
                 <ImageView
                     android:id="@+id/cardFifthAnswerImage"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginEnd="4dp" />
-
-                <TextView
-                    android:id="@+id/cardFifthAnswerText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

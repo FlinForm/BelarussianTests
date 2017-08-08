@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,16 +34,14 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         adapterUtils.setDefaultAnswerImage(holder.imageViews);
         holder.questionText.setText(questions.get(position).getQuestion());
-        holder.textViews[0].setText(questions.get(position).getAnswers()[0].getAnswer());
-        holder.textViews[1].setText(questions.get(position).getAnswers()[1].getAnswer());
-        holder.textViews[2].setText(questions.get(position).getAnswers()[2].getAnswer());
-        holder.textViews[3].setText(questions.get(position).getAnswers()[3].getAnswer());
-        holder.textViews[4].setText(questions.get(position).getAnswers()[4].getAnswer());
+        holder.checkBoxes[0].setText(questions.get(position).getAnswers()[0].getAnswer());
+        holder.checkBoxes[1].setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.checkBoxes[2].setText(questions.get(position).getAnswers()[2].getAnswer());
+        holder.checkBoxes[3].setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.checkBoxes[4].setText(questions.get(position).getAnswers()[4].getAnswer());
         adapterUtils.setAnswerImage(questions.get(position), holder.imageViews);
-        adapterUtils.setCardViewColor(Quiz.getTestQuestions().get(position),
-                holder.cardView,
-                holder.itemView);
-        adapterUtils.strikeThroughTextViews(questions.get(position), holder.textViews);
+        adapterUtils.setCardViewColor(questions.get(position), holder.cardView, holder.itemView);
+        adapterUtils.setCheckBoxes(questions.get(position), holder.checkBoxes);
     }
 
     @Override
@@ -52,7 +51,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder  {
         private final TextView questionText;
-        private final TextView[] textViews;
+        private final CheckBox[] checkBoxes;
         private final ImageView[] imageViews;
         private final CardView cardView;
         private final View itemView;
@@ -61,17 +60,17 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             super(itemView);
             this.itemView = itemView;
 
-            textViews = new TextView[5];
+            checkBoxes = new CheckBox[5];
             imageViews = new ImageView[5];
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
             questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
 
-            textViews[0] = (TextView) itemView.findViewById(R.id.cardFirstAnswerText);
-            textViews[1] = (TextView) itemView.findViewById(R.id.cardSecondAnswerText);
-            textViews[2] = (TextView) itemView.findViewById(R.id.cardThirdAnswerText);
-            textViews[3] = (TextView) itemView.findViewById(R.id.cardFourthAnswerText);
-            textViews[4] = (TextView) itemView.findViewById(R.id.cardFifthAnswerText);
+            checkBoxes[0] = (CheckBox) itemView.findViewById(R.id.cardFirstAnswerCheckbox);
+            checkBoxes[1] = (CheckBox) itemView.findViewById(R.id.cardSecondAnswerCheckbox);
+            checkBoxes[2] = (CheckBox) itemView.findViewById(R.id.cardThirdAnswerCheckbox);
+            checkBoxes[3] = (CheckBox) itemView.findViewById(R.id.cardFourthAnswerCheckbox);
+            checkBoxes[4] = (CheckBox) itemView.findViewById(R.id.cardFifthAnswerCheckbox);
 
             imageViews[0] = (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
             imageViews[1] = (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
