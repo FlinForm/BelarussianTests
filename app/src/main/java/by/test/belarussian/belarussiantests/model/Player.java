@@ -42,6 +42,7 @@ public class Player implements Comparable<Player> {
                 correctAnswers++;
             }
         }
+        System.out.println("correct: " + correctAnswers);
     }
 
     @Override

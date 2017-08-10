@@ -1,12 +1,10 @@
 package by.test.belarussian.belarussiantests.model.rvadapter;
 
-import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.questions.Question;
@@ -42,11 +40,18 @@ public class AdapterUtils {
     }
 
     void setCheckBoxes(Question question, CheckBox[] checkBoxes) {
+        resetCheckBoxes(checkBoxes);
         for (int i = 0; i < question.getAnswers().length; i++) {
             checkBoxes[i].setClickable(false);
             if (question.getAnswers()[i].isSelected()) {
                 checkBoxes[i].setChecked(true);
             }
+        }
+    }
+
+    private void resetCheckBoxes(CheckBox[] checkBoxes) {
+        for (int i= 0; i < checkBoxes.length; i++) {
+            checkBoxes[i].setChecked(false);
         }
     }
 }

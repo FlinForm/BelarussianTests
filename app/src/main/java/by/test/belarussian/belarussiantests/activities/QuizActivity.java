@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.fragments.QuestionFragment;
+import by.test.belarussian.belarussiantests.model.ActivityAuxiliaryMethods;
 import by.test.belarussian.belarussiantests.model.Quiz;
 import by.test.belarussian.belarussiantests.model.viewpager.MyViewPager;
 import by.test.belarussian.belarussiantests.model.viewpager.ViewPagerAdapter;
@@ -84,6 +85,7 @@ public class QuizActivity extends AppCompatActivity
         Quiz.checkQuestionAnswers();
         Quiz.getPlayer().setCorrectAnswers();
         Quiz.addBestPlayer();
+        ActivityAuxiliaryMethods.saveBestPlayers(this);
 
         startActivity(new Intent(this, ResultsActivity.class));
         finish();

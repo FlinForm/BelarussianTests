@@ -383,7 +383,7 @@
     "question" : "Адзначце словы, якія неабходна пісаць з малой літары",
     "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
     "answers": [
-      {"answer": "лаўрэат (Дз, дз)яржаўнай прэміі", "correct": false, "selected": false},
+      {"answer": "Лаўрэат (Дз, дз)яржаўнай прэміі", "correct": false, "selected": false},
       {"answer": "(З, з)аслужаны майстар спорту", "correct": true, "selected": false},
       {"answer": "Візантыйская (І, і)мперыя", "correct": false, "selected": false},
       {"answer": "(К, к)упалаўскія мясціны", "correct": true, "selected": false},

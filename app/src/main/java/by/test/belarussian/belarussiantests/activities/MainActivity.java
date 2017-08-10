@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
+import by.test.belarussian.belarussiantests.model.ActivityAuxiliaryMethods;
 import by.test.belarussian.belarussiantests.model.Player;
 import by.test.belarussian.belarussiantests.model.questions.Question;
 import by.test.belarussian.belarussiantests.model.questions.Questions;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
-    private final String SHARED_PREFERENCES_KEY = "player";
 
     private AlertDialog startDialog, resultsDialog, rulesDialog;
     private Questions questions;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         Quiz.bestPlayers.clear();
-        readBestPlayers();
+        ActivityAuxiliaryMethods.readBestPlayers(this);
     }
 
     @Override
@@ -71,13 +71,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rulesDialog = builder.create();
 
         questions = new Questions();
-        parseJson(questions);
+        ActivityAuxiliaryMethods.parseJson(questions, this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        saveBestPlayers();
+        ActivityAuxiliaryMethods.saveBestPlayers(this);
     }
 
     @Override
@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.resultsButton:
                 resultsDialog.show();
+                System.out.println(Quiz.bestPlayers.size());
                 Collections.sort(Quiz.bestPlayers);
                 String[] results = Quiz.getBestResults();
                 TextView name = (TextView) resultsDialog.findViewById(R.id.bestResultsName);
@@ -153,53 +154,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dialogCancelButton:
                 startDialog.hide();
-        }
-    }
-
-    private void saveBestPlayers() {
-        int listRange = 5;
-        if (Quiz.bestPlayers.size() < 5) {
-            listRange = Quiz.bestPlayers.size();
-        }
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        for (int i = 0; i < listRange; i++) {
-            if (Quiz.bestPlayers.get(i) != null) {
-                editor.putString(SHARED_PREFERENCES_KEY + i, Quiz.bestPlayers.get(i).toString());
-            }
-        }
-        editor.commit();
-    }
-
-    private void readBestPlayers() {
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        Map<String, ?> savedData = sharedPreferences.getAll();
-
-        for (Map.Entry<String, ?> savedPlayer : savedData.entrySet()) {
-            if (savedPlayer.getKey().startsWith(SHARED_PREFERENCES_KEY)) {
-                String[] player = savedPlayer.getValue().toString().split(" ");
-                Quiz.bestPlayers.add(new Player(player[0],
-                        Long.parseLong(player[1]),
-                        Integer.parseInt(player[2])));
-            }
-        }
-    }
-
-    private void parseJson(Questions questions) {
-        ObjectMapper mapper = new ObjectMapper();
-        InputStream inputStream = getResources().openRawResource(R.raw.questions);
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte buffer[] = new byte[1024];
-        int length;
-        try {
-            while ((length = inputStream.read(buffer)) != -1) {
-                baos.write(buffer, 0, length);
-            }
-            baos.close();
-            inputStream.close();
-            questions.setQuestions(mapper.readValue(baos.toString(),
-                    new TypeReference<List<Question>>(){}));
-        } catch (IOException ignored) {
         }
     }
 }

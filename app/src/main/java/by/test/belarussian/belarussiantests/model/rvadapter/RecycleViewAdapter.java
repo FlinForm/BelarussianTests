@@ -13,7 +13,6 @@ import java.util.List;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.model.questions.Question;
-import by.test.belarussian.belarussiantests.model.Quiz;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
     private final List<Question> questions;

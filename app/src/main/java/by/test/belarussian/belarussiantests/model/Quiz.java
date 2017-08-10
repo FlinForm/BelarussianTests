@@ -11,7 +11,7 @@ import by.test.belarussian.belarussiantests.model.questions.Question;
 
 public class Quiz {
     protected static final DateFormat formatter = new SimpleDateFormat("mm:ss");
-    public static final List<Player> bestPlayers = new ArrayList<>();
+    public static List<Player> bestPlayers = new ArrayList<>();
     public static List<Question> testQuestions = new ArrayList<>(10);
     public static Player player;
 
@@ -38,6 +38,7 @@ public class Quiz {
 
     public static void resetSelectedAnswers() {
         for (Question question : testQuestions) {
+            question.setAnswered(false);
             for (Question.Answer answer : question.getAnswers()) {
                 answer.setSelected(false);
             }
@@ -50,11 +51,11 @@ public class Quiz {
         }
         if (bestPlayers.size() < 5) {
             bestPlayers.add(player);
+
         } else {
             for (int i = 0; i < 5; i++) {
                 if (bestPlayers.get(i).compareTo(player) > 0) {
                     bestPlayers.add(player);
-                    return;
                 }
             }
         }
