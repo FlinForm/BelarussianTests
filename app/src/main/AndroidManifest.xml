@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <service android:name=".service.NotificationService"/>
+
         <activity android:name=".activities.QuizActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activities.ResultsActivity"

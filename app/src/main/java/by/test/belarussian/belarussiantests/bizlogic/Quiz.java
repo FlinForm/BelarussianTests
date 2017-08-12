@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.bizlogic;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import by.test.belarussian.belarussiantests.model.questions.Question;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
 public class Quiz {
     protected static final DateFormat formatter = new SimpleDateFormat("mm:ss");

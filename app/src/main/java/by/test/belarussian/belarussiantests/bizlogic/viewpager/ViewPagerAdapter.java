@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model.viewpager;
+package by.test.belarussian.belarussiantests.bizlogic.viewpager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

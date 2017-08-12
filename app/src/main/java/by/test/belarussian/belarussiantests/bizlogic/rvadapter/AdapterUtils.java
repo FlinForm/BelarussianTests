@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model.rvadapter;
+package by.test.belarussian.belarussiantests.bizlogic.rvadapter;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
@@ -7,7 +7,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.questions.Question;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
 public class AdapterUtils {
 

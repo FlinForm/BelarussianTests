@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.Quiz;
-import by.test.belarussian.belarussiantests.model.rvadapter.RecycleViewAdapter;
+import by.test.belarussian.belarussiantests.bizlogic.Quiz;
+import by.test.belarussian.belarussiantests.bizlogic.rvadapter.RecycleViewAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 

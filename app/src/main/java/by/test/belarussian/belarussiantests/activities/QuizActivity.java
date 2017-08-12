@@ -12,10 +12,10 @@ import android.widget.RelativeLayout;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.fragments.QuestionFragment;
-import by.test.belarussian.belarussiantests.model.ActivityAuxiliaryMethods;
-import by.test.belarussian.belarussiantests.model.Quiz;
-import by.test.belarussian.belarussiantests.model.viewpager.MyViewPager;
-import by.test.belarussian.belarussiantests.model.viewpager.ViewPagerAdapter;
+import by.test.belarussian.belarussiantests.bizlogic.ActivityAuxMethods;
+import by.test.belarussian.belarussiantests.bizlogic.Quiz;
+import by.test.belarussian.belarussiantests.bizlogic.viewpager.MyViewPager;
+import by.test.belarussian.belarussiantests.bizlogic.viewpager.ViewPagerAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -84,9 +84,10 @@ public class QuizActivity extends AppCompatActivity
         Quiz.getPlayer().setTime(endTime - startTime);
         Quiz.checkQuestionAnswers();
         Quiz.getPlayer().setCorrectAnswers();
-        Quiz.addBestPlayer();
-        ActivityAuxiliaryMethods.saveBestPlayers(this);
-
+        if (Quiz.getPlayer().getName() != null) {
+            Quiz.addBestPlayer();
+            ActivityAuxMethods.saveBestPlayers(this);
+        }
         startActivity(new Intent(this, ResultsActivity.class));
         finish();
     }

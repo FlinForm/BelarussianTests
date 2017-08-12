@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model.questions;
+package by.test.belarussian.belarussiantests.bizlogic.qmodel;
 
 import java.util.ArrayList;
 import java.util.List;

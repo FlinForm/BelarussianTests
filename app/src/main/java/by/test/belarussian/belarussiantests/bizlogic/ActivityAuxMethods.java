@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.bizlogic;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,10 +14,10 @@ import java.util.List;
 import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.questions.Question;
-import by.test.belarussian.belarussiantests.model.questions.Questions;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions;
 
-public class ActivityAuxiliaryMethods {
+public class ActivityAuxMethods {
     private static final String SHARED_PREFERENCES_KEY = "player";
 
     public static void saveBestPlayers(Context context) {

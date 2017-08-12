@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model;
+package by.test.belarussian.belarussiantests.bizlogic;
 
 import android.support.annotation.NonNull;
 

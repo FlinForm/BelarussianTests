@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.model.rvadapter;
+package by.test.belarussian.belarussiantests.bizlogic.rvadapter;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.questions.Question;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
     private final List<Question> questions;

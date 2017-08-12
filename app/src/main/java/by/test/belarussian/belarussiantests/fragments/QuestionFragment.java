@@ -12,7 +12,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.model.Quiz;
+import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 
 public class QuestionFragment extends Fragment implements View.OnClickListener {
     private static final String QUESTION_NUMBER = "questionNumber";
