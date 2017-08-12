@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startService(new Intent(this, NotificationService.class));
+        //startService(new Intent(this, NotificationService.class));
 
         buildDialogs();
 
