@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AlertDialog startDialog, resultsDialog, rulesDialog;
     private Questions questions;
 
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -111,6 +112,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView.setMovementMethod(new ScrollingMovementMethod());
                 break;
             case R.id.topicButton:
+                new by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions().;
+
                 PopupMenu popupMenu = new PopupMenu(this, v);
                 for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
                     popupMenu.getMenu().add((String) entry.getKey());

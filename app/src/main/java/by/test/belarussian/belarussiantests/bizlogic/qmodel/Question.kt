@@ -5,18 +5,17 @@ import com.fasterxml.jackson.annotation.JsonIgnore
 
 @JsonAutoDetect
 class Question {
-    private var question = String
-    private var subject = String
+    var question: String = ""
+    var subject: String = ""
 
     @JsonIgnore
-    private var isAnswered = false
-    private var answers = emptyArray<Answer>()
+    var isAnswered: Boolean = false
+    var answers = emptyArray<Answer>()
 
     @JsonAutoDetect
     class Answer {
-        private var answer = String
-        private var isCorrect: Boolean = false
-        private var isSelected: Boolean = false
-
+        var answer: String = ""
+        var isCorrect: Boolean = false
+        var isSelected: Boolean = false
     }
 }
