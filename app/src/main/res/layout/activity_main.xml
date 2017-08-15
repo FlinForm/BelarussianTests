@@ -52,15 +52,6 @@
             android:background="@drawable/selector"
             android:onClick="onClick"
             android:text="@string/best_results_button" />
-
-        <Button
-            android:id="@+id/rulesButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/selector"
-            android:onClick="onClick"
-            android:text="@string/rules_button" />
     </LinearLayout>
 
     <Button

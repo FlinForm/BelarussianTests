@@ -106,11 +106,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 assert answers != null;
                 answers.setText(results[2]);
                 break;
-            case R.id.rulesButton:
-                rulesDialog.show();
-                TextView textView = (TextView) rulesDialog.findViewById(R.id.rulesTextView);
-                textView.setMovementMethod(new ScrollingMovementMethod());
-                break;
             case R.id.topicButton:
                 PopupMenu popupMenu = new PopupMenu(this, v);
                 for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
