@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BelarussianTests</string>
+    <string name="app_name">Тэсты па беларускай мове</string>
     <string name="question_number">Пытанне №</string>
     <string name="results_text">Пытанне: </string>
     <string name="return_button_text">Вярнуцца</string>
@@ -49,4 +49,5 @@
         астуджаны, запрошаны. вывучаны, звіты, вымыты, вышыты, разгорнуты, праполаты,
         сагнуты і інш.
     </string>
+    <string name="about_developer">Аб распрацоўніку</string>
 </resources>

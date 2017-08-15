@@ -1,16 +1,15 @@
 package by.test.belarussian.belarussiantests.activities;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,7 +26,6 @@ import by.test.belarussian.belarussiantests.bizlogic.Player;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
-import by.test.belarussian.belarussiantests.service.NotificationService;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -55,9 +53,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
+
         //startService(new Intent(this, NotificationService.class));
 
-        buildDialogs();
+        buildAlertDialogs();
 
         questions = new Questions();
         ActivityAuxMethods.parseJson(questions, this);
@@ -160,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void buildDialogs() {
+    private void buildAlertDialogs() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
