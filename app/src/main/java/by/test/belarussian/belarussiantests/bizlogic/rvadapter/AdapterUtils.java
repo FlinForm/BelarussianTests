@@ -6,26 +6,27 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
+import java.util.List;
+
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
 public class AdapterUtils {
-
-    void setAnswerImage(Question question, ImageView[] imageViews) {
-        for (int i = 0; i < imageViews.length; i++) {
+    void setAnswerImage(Question question, List<ImageView> imageViews) {
+        for (int i = 0; i < imageViews.size(); i++) {
             if (question.getAnswers()[i].isCorrect()) {
                 if (question.getAnswers()[i].isSelected()) {
-                    imageViews[i].setImageResource(R.drawable.right);
+                    imageViews.get(i).setImageResource(R.drawable.right);
                 } else {
-                    imageViews[i].setImageResource(R.drawable.wrong);
+                    imageViews.get(i).setImageResource(R.drawable.wrong);
                 }
             }
         }
     }
 
-    void setDefaultAnswerImage(ImageView[] imageViews) {
-        for (int i = 0; i < imageViews.length; i++) {
-            imageViews[i].setImageDrawable(null);
+    void setDefaultAnswerImage(List<ImageView> imageViews) {
+        for (ImageView imageView : imageViews) {
+            imageView.setImageDrawable(null);
         }
     }
 
@@ -39,19 +40,19 @@ public class AdapterUtils {
         }
     }
 
-    void setCheckBoxes(Question question, CheckBox[] checkBoxes) {
+    void setCheckBoxes(Question question, List<CheckBox> checkBoxes) {
         resetCheckBoxes(checkBoxes);
         for (int i = 0; i < question.getAnswers().length; i++) {
-            checkBoxes[i].setClickable(false);
+            checkBoxes.get(i).setClickable(false);
             if (question.getAnswers()[i].isSelected()) {
-                checkBoxes[i].setChecked(true);
+                checkBoxes.get(i).setChecked(true);
             }
         }
     }
 
-    private void resetCheckBoxes(CheckBox[] checkBoxes) {
-        for (int i= 0; i < checkBoxes.length; i++) {
-            checkBoxes[i].setChecked(false);
+    private void resetCheckBoxes(List<CheckBox> checkBoxes) {
+        for (CheckBox checkBox : checkBoxes) {
+            checkBox.setChecked(false);
         }
     }
 }

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build());
     }
 
-    private AlertDialog startDialog, resultsDialog, rulesDialog;
+    private AlertDialog startDialog, resultsDialog;
     private Questions questions;
 
     @Override
@@ -52,14 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
-
-        //startService(new Intent(this, NotificationService.class));
-
         buildAlertDialogs();
-
         questions = new Questions();
         ActivityAuxMethods.parseJson(questions, this);
     }
@@ -160,11 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
-
         builder.setView(R.layout.best_results_dialog);
         resultsDialog = builder.create();
-
-        builder.setView(R.layout.rules_dialog);
-        rulesDialog = builder.create();
     }
 }

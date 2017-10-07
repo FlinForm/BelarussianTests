@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import by.test.belarussian.belarussiantests.bizlogic.rvadapter.RecycleViewAdapter;
@@ -17,6 +19,10 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ResultsActivity extends AppCompatActivity {
+    @BindView(R.id.resultsReturnButton) View button;
+    @BindView(R.id.correctResultsTextView) TextView correctResults;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
+    @BindView(R.id.resultsTimeTextView) TextView time;
     private static final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
     static {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
@@ -29,26 +35,17 @@ public class ResultsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
-
+        ButterKnife.bind(this);
         RecycleViewAdapter adapter = new RecycleViewAdapter(Quiz.getTestQuestions());
-
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
-        TextView correctResults = (TextView) findViewById(R.id.correctResultsTextView);
         correctResults.setText(getString(R.string.results_text)
                 + " "
                 + Quiz.getPlayer().getCorrectAnswers()
                 + "/"
                 + Quiz.getTestQuestions().size());
-
-        TextView time = (TextView) findViewById(R.id.resultsTimeTextView);
         time.setText(Quiz.getPlayer().getFormattedTime());
-
-        View button = findViewById(R.id.resultsReturnButton);
         button.setOnClickListener(event -> finish());
-
         if (Quiz.bestPlayers.contains(Quiz.getPlayer()) && Quiz.getPosition()) {
             Snackbar.make(getWindow().getDecorView().getRootView(),
                     R.string.perform_best_result,

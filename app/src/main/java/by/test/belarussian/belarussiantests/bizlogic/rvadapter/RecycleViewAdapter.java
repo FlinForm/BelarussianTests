@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.BindViews;
+import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
@@ -33,11 +36,11 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         adapterUtils.setDefaultAnswerImage(holder.imageViews);
         holder.questionText.setText(questions.get(position).getQuestion());
-        holder.checkBoxes[0].setText(questions.get(position).getAnswers()[0].getAnswer());
-        holder.checkBoxes[1].setText(questions.get(position).getAnswers()[1].getAnswer());
-        holder.checkBoxes[2].setText(questions.get(position).getAnswers()[2].getAnswer());
-        holder.checkBoxes[3].setText(questions.get(position).getAnswers()[3].getAnswer());
-        holder.checkBoxes[4].setText(questions.get(position).getAnswers()[4].getAnswer());
+        holder.checkBoxes.get(0).setText(questions.get(position).getAnswers()[0].getAnswer());
+        holder.checkBoxes.get(1).setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.checkBoxes.get(2).setText(questions.get(position).getAnswers()[2].getAnswer());
+        holder.checkBoxes.get(3).setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.checkBoxes.get(4).setText(questions.get(position).getAnswers()[4].getAnswer());
         adapterUtils.setAnswerImage(questions.get(position), holder.imageViews);
         adapterUtils.setCardViewColor(questions.get(position), holder.cardView, holder.itemView);
         adapterUtils.setCheckBoxes(questions.get(position), holder.checkBoxes);
@@ -49,33 +52,26 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder  {
-        private final TextView questionText;
-        private final CheckBox[] checkBoxes;
-        private final ImageView[] imageViews;
-        private final CardView cardView;
-        private final View itemView;
+        @BindView(R.id.cardView) CardView cardView;
+        @BindView(R.id.cardQuestionText) TextView questionText;
+        @BindViews({
+                R.id.cardFirstAnswerCheckbox,
+                R.id.cardSecondAnswerCheckbox,
+                R.id.cardThirdAnswerCheckbox,
+                R.id.cardFourthAnswerCheckbox,
+                R.id.cardFifthAnswerCheckbox}) List<CheckBox> checkBoxes;
+        @BindViews({
+                R.id.cardFirstAnswerImage,
+                R.id.cardSecondAnswerImage,
+                R.id.cardThirdAnswerImage,
+                R.id.cardFourthAnswerImage,
+                R.id.cardFifthAnswerImage}) List<ImageView> imageViews;
+        private View itemView;
 
         public ItemViewHolder(View itemView) {
             super(itemView);
             this.itemView = itemView;
-
-            checkBoxes = new CheckBox[5];
-            imageViews = new ImageView[5];
-
-            cardView = (CardView) itemView.findViewById(R.id.cardView);
-            questionText = (TextView) itemView.findViewById(R.id.cardQuestionText);
-
-            checkBoxes[0] = (CheckBox) itemView.findViewById(R.id.cardFirstAnswerCheckbox);
-            checkBoxes[1] = (CheckBox) itemView.findViewById(R.id.cardSecondAnswerCheckbox);
-            checkBoxes[2] = (CheckBox) itemView.findViewById(R.id.cardThirdAnswerCheckbox);
-            checkBoxes[3] = (CheckBox) itemView.findViewById(R.id.cardFourthAnswerCheckbox);
-            checkBoxes[4] = (CheckBox) itemView.findViewById(R.id.cardFifthAnswerCheckbox);
-
-            imageViews[0] = (ImageView) itemView.findViewById(R.id.cardFirstAnswerImage);
-            imageViews[1] = (ImageView) itemView.findViewById(R.id.cardSecondAnswerImage);
-            imageViews[2] = (ImageView) itemView.findViewById(R.id.cardThirdAnswerImage);
-            imageViews[3] = (ImageView) itemView.findViewById(R.id.cardFourthAnswerImage);
-            imageViews[4] = (ImageView) itemView.findViewById(R.id.cardFifthAnswerImage);
+            ButterKnife.bind(this, itemView);
         }
     }
 }
