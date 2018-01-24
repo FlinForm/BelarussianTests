@@ -38,8 +38,12 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         holder.questionText.setText(questions.get(position).getQuestion());
         holder.checkBoxes.get(0).setText(questions.get(position).getAnswers()[0].getAnswer());
         holder.checkBoxes.get(1).setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.checkBoxes.get(1).setText(questions.get(position).getAnswers()[1].getAnswer());
+        holder.checkBoxes.get(2).setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.checkBoxes.get(2).setText(questions.get(position).getAnswers()[2].getAnswer());
         holder.checkBoxes.get(3).setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.checkBoxes.get(3).setText(questions.get(position).getAnswers()[3].getAnswer());
+        holder.checkBoxes.get(4).setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.checkBoxes.get(4).setText(questions.get(position).getAnswers()[4].getAnswer());
         adapterUtils.setAnswerImage(questions.get(position), holder.imageViews);
         adapterUtils.setCardViewColor(questions.get(position), holder.cardView, holder.itemView);

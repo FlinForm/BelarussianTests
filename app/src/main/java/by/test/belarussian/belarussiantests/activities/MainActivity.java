@@ -4,26 +4,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BaseTransientBottomBar;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.PopupMenu;
-import android.support.v7.widget.Toolbar;
-import android.text.method.ScrollingMovementMethod;
+import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.ActivityAuxMethods;
 import by.test.belarussian.belarussiantests.bizlogic.Player;
-import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -31,6 +29,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
+
     static {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath(DEFAULT_FONTS_PATH)
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build());
     }
 
-    private AlertDialog startDialog, resultsDialog;
+    private AlertDialog startDialog, resultsDialog, rulesDialog, topicsDialog;
     private Questions questions;
 
     @Override
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         questions = new Questions();
         ActivityAuxMethods.parseJson(questions, this);
     }
+
 
     @Override
     protected void onPause() {
@@ -100,7 +100,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 answers.setText(results[2]);
                 break;
             case R.id.topicButton:
-                PopupMenu popupMenu = new PopupMenu(this, v);
+                initButtonslayout();
+                topicsDialog.show();
+                /*PopupMenu popupMenu = new PopupMenu(this, v);
                 for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
                     popupMenu.getMenu().add((String) entry.getKey());
                 }
@@ -118,7 +120,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     return true;
                 });
-                popupMenu.show();
+                popupMenu.show();*/
+
                 break;
             case R.id.dialogStartButton:
                 Quiz.resetSelectedAnswers();
@@ -146,14 +149,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dialogCancelButton:
                 startDialog.hide();
+                break;
+            case R.id.developersButton:
+                rulesDialog.show();
+                break;
         }
+    }
+
+    private void initButtonslayout() {
     }
 
     private void buildAlertDialogs() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
+
         builder.setView(R.layout.best_results_dialog);
         resultsDialog = builder.create();
+
+        builder.setView(R.layout.rules_dialog);
+        rulesDialog = builder.create();
+
+        builder.setView(R.layout.layout_topics);
+        topicsDialog = builder.create();
     }
 }

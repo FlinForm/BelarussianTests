@@ -1,402 +1,3102 @@
 [
   {
-    "question" : "Адзначце словы, у якіх пішацца літара а:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара а:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "адр...сат", "correct": true, "selected": false},
-      {"answer": "бут...рброд", "correct": false, "selected": false},
-      {"answer": "Чыкаг...", "correct": true, "selected": false},
-      {"answer": "вер...цяно", "correct": true, "selected": false},
-      {"answer": "зарж...вець", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "адр...сат",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "бут...рброд",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Чыкаг...",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "вер...цяно",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "зарж...вець",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца літара о:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара о:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "танг...", "correct": false, "selected": false},
-      {"answer": "ватэрп...ла", "correct": true, "selected": false},
-      {"answer": "гл...таць", "correct": false, "selected": false},
-      {"answer": "ч...вен", "correct": true, "selected": false},
-      {"answer": "в...семдзесят", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "танг...",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ватэрп...ла",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "гл...таць",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ч...вен",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "в...семдзесят",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца літара э:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара э:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "т...лефон", "correct": true, "selected": false},
-      {"answer": "ас...нсаваць", "correct": true, "selected": false},
-      {"answer": "р...лiгiя", "correct": true, "selected": false},
-      {"answer": "гр...мучы", "correct": false, "selected": false},
-      {"answer": "лат...рэя", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "т...лефон",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ас...нсаваць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "р...лiгiя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "гр...мучы",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "лат...рэя",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца літара ы:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара ы:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "р...форма", "correct": false, "selected": false},
-      {"answer": "iнж...нер", "correct": true, "selected": false},
-      {"answer": "т...рмометр", "correct": false, "selected": false},
-      {"answer": "др...мучы", "correct": true, "selected": false},
-      {"answer": "канц..лярыя", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "р...форма",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "iнж...нер",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "т...рмометр",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "др...мучы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "канц..лярыя",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца літара е:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара е:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "...гiпецкая", "correct": false, "selected": false},
-      {"answer": "с...ржанцкія", "correct": true, "selected": false},
-      {"answer": "г...неральскі", "correct": false, "selected": false},
-      {"answer": "...фрэйтарскі", "correct": true, "selected": false},
-      {"answer": "с...лянскі сыр", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "...гiпецкая",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с...ржанцкія",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "г...неральскі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "...фрэйтарскі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "с...лянскі сыр",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца літара я:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца літара я:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "выгл...д", "correct": true, "selected": false},
-      {"answer": "грэб...нь", "correct": false, "selected": false},
-      {"answer": "с...рабро", "correct": false, "selected": false},
-      {"answer": "с...рэбраны", "correct": true, "selected": false},
-      {"answer": "дзес...тка", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "выгл...д",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "грэб...нь",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с...рабро",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с...рэбраны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "дзес...тка",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца злучальная літара я:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца злучальная літара я:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "гус...гадоўля", "correct": false, "selected": false},
-      {"answer": "сін...вокі", "correct": true, "selected": false},
-      {"answer": "ален...вод", "correct": true, "selected": false},
-      {"answer": "агн...стрэльны", "correct": true, "selected": false},
-      {"answer": "заходн..сібірскі", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "гус...гадоўля",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "сін...вокі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ален...вод",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "агн...стрэльны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "заходн..сібірскі",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца злучальная літара е:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца злучальная літара е:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "дво...ўладдзе", "correct": true, "selected": false},
-      {"answer": "стал...ліцейны", "correct": true, "selected": false},
-      {"answer": "ус...беларускі", "correct": true, "selected": false},
-      {"answer": "кле...вар", "correct": false, "selected": false},
-      {"answer": "жыцц...сцвярджальны", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "дво...ўладдзе",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "стал...ліцейны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ус...беларускі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кле...вар",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "жыцц...сцвярджальны",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца злучальная літара о:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца злучальная літара о:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "шкл...вар", "correct": false, "selected": false},
-      {"answer": "ільн...валакно", "correct": true, "selected": false},
-      {"answer": "ільн...часалка", "correct": true, "selected": false},
-      {"answer": "ільн...сеялка", "correct": false, "selected": false},
-      {"answer": "энерг...гаспадарка", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "шкл...вар",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ільн...валакно",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ільн...часалка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ільн...сеялка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "энерг...гаспадарка",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца злучальная літара а:",
-    "subject" : "ПРАВАПІС ГАЛОСНЫХ",
+    "question": "Адзначце словы, у якіх пішацца злучальная літара а:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "закон...парушальнік", "correct": true, "selected": false},
-      {"answer": "шкл...пластыкавы", "correct": true, "selected": false},
-      {"answer": "час...піс", "correct": false, "selected": false},
-      {"answer": "адн...разовы", "correct": true, "selected": false},
-      {"answer": "кін...герой", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "закон...парушальнік",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "шкл...пластыкавы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "час...піс",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "адн...разовы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кін...герой",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішацца прыстаўная галосная:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара а:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "коні за…ржалі", "correct": false, "selected": false},
-      {"answer": "…рваліся на волю", "correct": true, "selected": false},
-      {"answer": "няма …опраткі", "correct": false, "selected": false},
-      {"answer": "узгорак …льдзісты", "correct": true, "selected": false},
-      {"answer": "тын …мшалы", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "Ч...рнышэўскi, задр...маць, ц...нтральны, гарыз...нтальны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ш...раваты, лiбрэт..., ястр...б, ш...вялюра, кват...рант",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Антары..., тост...р, бухгалт...р, стач...чнік, т...рмометр",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с...кратар, д...лікатэс, інкогніт..., р...дыска",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "маэстр..., ...бруч, нед...важванне, ...ксана",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прыстаўная (устаўная) галосная не пішацца:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара э:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "вока…мгненна", "correct": true, "selected": false},
-      {"answer": "…ржанне", "correct": false, "selected": false},
-      {"answer": "за…мглёны", "correct": true, "selected": false},
-      {"answer": "балотнай …ржой", "correct": false, "selected": false},
-      {"answer": "на …ржэўніку", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "д...легат, ц...лафан, т...рмінова, сурв...тка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "...підэмія, характ...р, мяш...чак, куп…",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "падстр...шша, мат...рыял, гіпот...за, ц...нзура",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "фламаст...р, шч...бятаць, пр...зідэнт, сч...рсцвець",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "лід...р, прыч...саць, п...цкаць, ж....раў",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх пішуцца прыстаўныя зычныя:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара ы:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "…ультыматум", "correct": false, "selected": false},
-      {"answer": "…одбліск", "correct": true, "selected": false},
-      {"answer": "…этакі", "correct": true, "selected": false},
-      {"answer": "…омскі", "correct": false, "selected": false},
-      {"answer": "…усмятку", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "тр...вога, т...хнічны, ж...рафа, гл...ток",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "поч...рк, д...летант, др...вотня, мар...ва",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "д...рыжабль, др...жаць, канц...лярыя, бр...зент",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "мер...дыян, р...сора, прагл...нуць, ц...рымонія",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ж...харка, ж...тон, бл...ха, д...рэктар",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прыстаўныя (устаўныя) зычныя не пішуцца:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара е:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "…уюн", "correct": true, "selected": false},
-      {"answer": "…обмацкам", "correct": false, "selected": false},
-      {"answer": "…анна", "correct": false, "selected": false},
-      {"answer": "…ачыма", "correct": false, "selected": false},
-      {"answer": "…іронія", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "лег...ндарны, персп..ктывы, удал...чыні, гал...рэя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кал…ктыў, Б…рлін, ...фрэйтар, вец...рок",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с...нсацыя, бег...мот, с...мнаццаць, н...смачны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вец...р, ...ўропа, сн...жок, л...скатаць",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "б...тонны, п..рсона, пас...ка, верас...нь",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прапушчана літара ў (нескладовае):",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара я:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "сала…і", "correct": true, "selected": false},
-      {"answer": "ва…торна", "correct": false, "selected": false},
-      {"answer": "ва …ладзівастоку", "correct": false, "selected": false},
-      {"answer": "ла…рэат", "correct": true, "selected": false},
-      {"answer": "ба…кон", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "кл...новы, сп...шацца б...спамылковы, дз..журны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "дал...чынь, дз...ўчынка, м...ккаваты, дзев...ць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "л...мантаваць, Н...свіж, В...часлаў, в...чэрні",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "выгл...д, тыс...чны, м...тровы, Пал...сціна",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "с..мёра, п...цярня, кл...ймо, св...ткаваць",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прапушчана літара у (складовае):",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца злучальная літара я:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "бра…нінг", "correct": false, "selected": false},
-      {"answer": "прэзіды…м", "correct": true, "selected": false},
-      {"answer": "удвая-…трая", "correct": false, "selected": false},
-      {"answer": "Ланда…", "correct": true, "selected": false},
-      {"answer": "новая …рна", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "вугл...воз, сярэдн...сутачны, гус...ферма, жыцц...люб",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "земл...мер, насенн...водства, сiн...вокi, ба...здольнасць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "узроўн...мер, сал...варня, вогн...тушыцель, кон...гадоўля",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ален..вод, жыцц...радасны, камен...ломня, пал...водства",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кра...від, ус...ночная, пыл...сос, шэрсц...прадзiльны",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх замест пропускаў пішацца літара ы:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца злучальная літара е:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "без…ніцыятыўны", "correct": true, "selected": false},
-      {"answer": "між…рыгацыйны", "correct": false, "selected": false},
-      {"answer": "аб…граць", "correct": true, "selected": false},
-      {"answer": "пад…граць", "correct": true, "selected": false},
-      {"answer": "контр…гра", "correct": false, "selected": false}
-    ]},
+      {
+        "answer": "зерн...падобны, камен...драбілка, ус...славянскі, ус...дазволенасць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "коп’...падобны, ален...гадоўля, воўн...часалка, кул...мёт",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "заходн...еўрапейскi, зерн...драбiлка, хвал...падобны, вогн...ўстойлiвы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "рады...тэрапія, верхн...нямецкі, дал...гляд, ус...мерны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вол...выяўленне, кон...гадовец, рады...лячэнне, вільгац...паглынальнік",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, напісаныя без арфаграфічных памылак:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца злучальная літара о:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "безіменны", "correct": false, "selected": false},
-      {"answer": "абыйсці", "correct": false, "selected": false},
-      {"answer": "праіснаваць", "correct": true, "selected": false},
-      {"answer": "выйгрышны", "correct": true, "selected": false},
-      {"answer": "заінтрыгаваць", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "шкл...пакет, шлак...вата, нізк...якасны, перф...карта",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "шкл...вытворчасць, ільн...прадукцыя, кур...дым, Вад...хрышча",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ільн...ўборачны, святл...маскіроўка, шкл...кераміка, час...піс",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "кніг...люб, лён...валакно, мног...галоссе, шлем...фон",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "святл...музыка, шкл...эмаль, сам...праверка, свяшчэнн...служэнне",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прапушчана літара й:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара о:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "за…здросны", "correct": true, "selected": false},
-      {"answer": "па…менна", "correct": true, "selected": false},
-      {"answer": "сы…шоў", "correct": false, "selected": false},
-      {"answer": "за…рдзецца", "correct": false, "selected": false},
-      {"answer": "за…мальны", "correct": true, "selected": false}
-    ]},
+      {
+        "answer": "выс...каiдэйны, п...лiтэхнiчны, св...еасаблiвы, н...ваўведзены",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ст...гадовы, ф...тапейзаж, к...нтрмеры, в...дамерны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "в...семсот, к...паскладальнік, п...ўнаметражны, пр...цiатамны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сваб...далюбівы, чатыр...хметровы, м...таролер, м...ватворчасць",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ч...рнарабочы, шт...дзённа, ст...клетачны, ф...таоптыка",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
   {
-    "question" : "Адзначце словы, у якіх прапушчана літара і:",
-    "subject" : "ПРАВАПІС ПРЫСТАЎНЫХ",
+    "question": "Адзначце радкі, дзе ва ўсіх словах пішацца літара а:",
+    "subject": "ПРАВАПІС ГАЛОСНЫХ",
     "answers": [
-      {"answer": "звыш…мклівы", "correct": false, "selected": false},
-      {"answer": "пра…снаваць", "correct": true, "selected": false},
-      {"answer": "гіпер…нфляцыя", "correct": true, "selected": false},
-      {"answer": "сан…нструктар", "correct": true, "selected": false},
-      {"answer": "суб…нспектар", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх прапушчана літара с",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "д...браякасны, абар...наздольнасць, д...макiраўнiцтва, н...вабранец",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "в...льнадумец, кар...ткашэрсны, п...лiклiнiка, ч...рнавокi",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "г...рбаносы, с...ракаметровы, гр...смайстар, пр...цідымны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "г...рналыжнік, в...сьмісот, ск...растрэльны, агар...днінасховішча",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "д...брадушнасць, т...нкабровы, т...ўстастволы, ф...натэка",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішацца прыстаўная галосная:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "а…часлівіць сябра", "correct": false, "selected": false},
-      {"answer": "ра…чыніць дзверы", "correct": true, "selected": false},
-      {"answer": "ра…чытаць рукапіс", "correct": true, "selected": false},
-      {"answer": "ра…чараванне", "correct": true, "selected": false},
-      {"answer": "новы ра…піль", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх прапушчана літара ш",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "коні за…ржалі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…рваліся на волю",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "няма …опраткі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "узгорак …льдзісты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "тын …мшалы",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прыстаўная (устаўная) галосная не пішацца:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "са…чапіць рукі", "correct": true, "selected": false},
-      {"answer": "ра…чуліць слухачоў", "correct": false, "selected": false},
-      {"answer": "у…чыльніць глебу", "correct": true, "selected": false},
-      {"answer": "ра…шыць сшытак", "correct": false, "selected": false},
-      {"answer": "ра…чыніць цеста", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх пішуцца літары дэ, д, ды",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "вока…мгненна",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…ржанне",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "за…мглёны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "балотнай …ржой",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "на …ржэўніку",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішуцца прыстаўныя зычныя:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(дэ, дзе)партамент", "correct": true, "selected": false},
-      {"answer": "па(д, дз)везці", "correct": true, "selected": false},
-      {"answer": "(д, дзе)сьці", "correct": false, "selected": false},
-      {"answer": "(ды, дзі)відэнд", "correct": true, "selected": false},
-      {"answer": "(дэ, дзе)кабрысты", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх пішацца літара дз",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "…ультыматум",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…одбліск",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…этакі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…омскі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…усмятку",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прыстаўныя (устаўныя) зычныя не пішуцца:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(дэ, дзе)рывацыйны", "correct": false, "selected": false},
-      {"answer": "(ду, дзю)на", "correct": true, "selected": false},
-      {"answer": "(ды, дзі)рыжабль", "correct": false, "selected": false},
-      {"answer": "блан(ды, дзі)н", "correct": true, "selected": false},
-      {"answer": "по(д, дз)віг", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх пішацца літара ц:",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "…уюн",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…обмацкам",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…анна",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…ачыма",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…іронія",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара ў (нескладовае):",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "аван(цю, ту)рны", "correct": false, "selected": false},
-      {"answer": "ла(ці, ты)нскі", "correct": true, "selected": false},
-      {"answer": "каран(ці, ты)н", "correct": true, "selected": false},
-      {"answer": "зачарс(ц, т)велы", "correct": true, "selected": false},
-      {"answer": "(ц, т)вёрды", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх пішацца літара т",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "сала…і",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ва…торна",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ва …ладзівастоку",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ла…рэат",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ба…кон",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара у (складовае):",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(ці, ты)гровая", "correct": true, "selected": false},
-      {"answer": "аўтары(це, тэ)тны", "correct": true, "selected": false},
-      {"answer": "лі(ц, т)віны", "correct": false, "selected": false},
-      {"answer": "(це, тэ)тэрмінатар", "correct": true, "selected": false},
-      {"answer": "прадук(ці, ты)ўнасць ", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх прапушчаны мяккі знак",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "бра…нінг",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "прэзіды…м",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "удвая-…трая",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Ланда…",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "новая …рна",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх замест пропускаў пішацца літара ы:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "кон..чыкі", "correct": false, "selected": false},
-      {"answer": "голуб..", "correct": false, "selected": false},
-      {"answer": "парц..ера", "correct": true, "selected": false},
-      {"answer": "карэн..чыкі", "correct": true, "selected": false},
-      {"answer": "суб..ект", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, у якіх прапушчаны апостаф",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "без…ніцыятыўны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "між…рыгацыйны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "аб…граць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "пад…граць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "контр…гра",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, напісаныя без арфаграфічных памылак:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "раз..юшыцца", "correct": true, "selected": false},
-      {"answer": "надвор..е", "correct": true, "selected": false},
-      {"answer": "сен..ёра", "correct": false, "selected": false},
-      {"answer": "вандроў..е", "correct": false, "selected": false},
-      {"answer": "інтэрв..ю", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, напісаныя без арфаграфічных памылак",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "безіменны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "абыйсці",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "праіснаваць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "выйгрышны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "заінтрыгаваць",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара й:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "нісчымніца", "correct": false, "selected": false},
-      {"answer": "ін’екцыя", "correct": true, "selected": false},
-      {"answer": "шкарлятына", "correct": true, "selected": false},
-      {"answer": "мадзіфікацыя", "correct": false, "selected": false},
-      {"answer": "эканомьце", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, напісаныя з арфаграфічнымі памылкамі",
-    "subject" : "ПРАВАПІС ЗЫЧНЫХ",
+      {
+        "answer": "за…здросны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "па…менна",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сы…шоў",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "за…рдзецца",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "за…мальны",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара і:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "тюлень", "correct": true, "selected": false},
-      {"answer": "з’едліва", "correct": false, "selected": false},
-      {"answer": "каменьчыкі", "correct": false, "selected": false},
-      {"answer": "восенью", "correct": true, "selected": false},
-      {"answer": "сасчыпаць", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, якія пішуцца з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "звыш…мклівы",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пра…снаваць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "гіпер…нфляцыя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сан…нструктар",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "суб…нспектар",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радок, дзе ва ўсіх словах замест пропуску трэба пісаць ў (нескладовае):",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "Усяслаў (Ч, ч) арадзей", "correct": true, "selected": false},
-      {"answer": "(М, м)удрая дачка", "correct": false, "selected": false},
-      {"answer": "Пётр (П, п)ершы", "correct": true, "selected": false},
-      {"answer": "(Г, г)арадзенскія прысмакі", "correct": false, "selected": false},
-      {"answer": "Давыд (Г, г)арадзенскі", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, якія пішуцца з малой літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "ска...т, архівары...с, дрэдно...т, А...гій",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "тры..мф, пакга..з, лака..т, поды..м",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Ма..глі, а..кцыён, Кейпта..н, сакса..л",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "бра..нінг, га..птвахта, а..дытар, бакала..р",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "літа..ры, со..с, опі..м, дыяры..ш",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў можа пісацца прыстаўная галосная:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(Б, б)агародзіца", "correct": false, "selected": false},
-      {"answer": "(Н, н)імфа", "correct": true, "selected": false},
-      {"answer": "(Р, р)ысак", "correct": true, "selected": false},
-      {"answer": "(А, а)кацыя", "correct": true, "selected": false},
-      {"answer": "(А, а)дмірал", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словазлучэнні, у якіх усе словы пішуцца з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "…львіца, …льнацёрка, …рвацца (наперад), …мгла",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…мчацца, …льнапункт, …ржанне, …млечны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…рдзець, …ржа, …мклівы, …мховы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…льнапрадукцыя, …мшаннік, …мсцівец, …лгаць",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…льнасушылка, …іржышча, …лоб, …мліва",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў можа пісацца прыстаўная зычная:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(Ц, ц)іхаакіянскі (Ф, ф)лот", "correct": false, "selected": false},
-      {"answer": "(З, з)аходняя (Дз, дз)віна", "correct": true, "selected": false},
-      {"answer": "(Н, н)овая (З, з)еландыя", "correct": true, "selected": false},
-      {"answer": "(Р, р)эч (П, п)аспалітая", "correct": true, "selected": false},
-      {"answer": "(Б, б)рэсцкая (Ш, ш)аша", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словазлучэнні, у якіх усе словы пішуцца з малой літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "…астрадзюбы, …этага, …офісны, …одпуск",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…оспа, …одзыў, …углявоз, …урбанізацыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "на…огул, …одпаведзь, …участак, …оўначасалка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "…аспаваты, …ока, …одблескі, …улічны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "…асьміног, …асьмушка, на…астрыць, …аколіца",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радок, дзе ва ўсіх словах трэба пісаць у (складовае):",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(Ф, ф)ранцузскі (Б, б)бульдог", "correct": true, "selected": false},
-      {"answer": "(К, к)іеўская (Р, р)усь", "correct": false, "selected": false},
-      {"answer": "(Б, б)елавежская (П, п)ушча", "correct": false, "selected": false},
-      {"answer": "(К, к)раіна ) (Ц, ц)юльпанаў", "correct": false, "selected": false},
-      {"answer": "(Б, б)ыкаўскі (С, с)стыль", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце нумары, дзе ўсе тры словы пішуцца з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "неда(у, ў)камплектаваць, ваенна-(у,ў)ліковы, на(у, ў)ючаны, іна(у,ў)гурацыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ба(у, ў)л, меды(у, ў)м, тры(у, ў)мфальны, архівары(у, ў)с",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ваку(у, ў)м, со(у, ў)с, Дубоўка (у, ў)ладзімір, (у, ў)чора",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ма(у, ў)зер, ка(у, ў)чук, пасадачна-(у, ў)злётны, га(у, ў)птвахта",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "аргана(у, ў)ты, вернікі-(у, ў)ніяты, ла(у, ў)рэат, дзяржа(у, ў)ны (у,ў)ніверсітэт",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе словы напісаны правільна:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(Б, б)еларускі (Дз, дз)яржаўны (У, у)ніверсітэт", "correct": false, "selected": false},
-      {"answer": "(З, з)лучаныя (Ш, ш)таты (А, а)мерыкі", "correct": true, "selected": false},
-      {"answer": "(В, в)уліца (Г, г)арадскі (В, в)ал", "correct": false, "selected": false},
-      {"answer": "(К, к)упалаўскі (Т, т)эатр", "correct": false, "selected": false},
-      {"answer": "(З, з)ямля (П, п)рынца (К, к)арла", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словазлучэнні, дзе першае слова пішацца з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "заключылі унію, крыкнулі «ўра», кампендыум, партыйна-ўрадавы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "прыехаў у аўторак, іграць на дудзе, прыгожая арабіна, над ілбом",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "белыя воблакі, ваконная рама, вуглякіслы газ, апрануўся прыгожа",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вастрыць нож, вушак, рыжскае узмор’е, нашы вожыкі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "вясёлыя скауты, пабываў на Алатаў, ноу-хау, з'есці вустрыцу",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах ёсць літары, якія абазначаюць прыстаўныя гукі:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(П, п)аўночная Афрыка", "correct": true, "selected": false},
-      {"answer": "(Т, т)уманнасць Андрамеды", "correct": false, "selected": false},
-      {"answer": "(К, к)аменны век", "correct": false, "selected": false},
-      {"answer": "(М, м)іжнародны з’езд славістаў", "correct": true, "selected": false},
-      {"answer": "(Дз, дз)ень танкіста", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словаспалучэнні, у якіх усе прыметнікі неабходна пісаць з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "вольха, ігрушу, волас, імгненне",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вузкаватая, ірваць, аржанішча, белавусы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "волакам, істужкі, агарод, завулак",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вокладка, вуду, амшары, вуздэчка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "аржаны, інстытуцкі, ільготны, гэтаксама",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе прапушчана літара і:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "Акадэмія (Ф, ф)ізічнага выхавання і спорту", "correct": false, "selected": false},
-      {"answer": "(Ж, ж)ыровіцкі (У, у)спенскі манастыр", "correct": true, "selected": false},
-      {"answer": "(К, к)ітайская (Н, н)ародная Рэспубліка", "correct": true, "selected": false},
-      {"answer": "(Б, б)еларускае (Т, т)элеграфнае агенцтва", "correct": false, "selected": false},
-      {"answer": "(М, м)інскае (С, с)увораўскае вучылішча", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце нумары словазлучэнняў, у якіх назоўнікі пішуцца з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "пера..начыць, атрымаць вы..грыш, спад..лба",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ад..мжэць, дэз..нтэграцыя, суб..нспектар, сонца ўз..шло",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пра..снаваць, аўта..нспектар, контр..дэя, да..льны апарат",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "..люмінатар, гука..заляцыя, пед..нстытуцкі, пра..граць мелодыю",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "па..мправізаваць, не..стотна, борт..нжынер, нядо..мшчык",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе прапушчана літара ы:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(П, п)апа Рымскі", "correct": true, "selected": false},
-      {"answer": "Генеральная (А, а)самблея (А, а)рганізацыі Аб’яднаных (Н, н)ацый", "correct": true, "selected": false},
-      {"answer": "Вялікая Айчынная (В, в)айна", "correct": false, "selected": false},
-      {"answer": "Чырвоная (К, к)кніга", "correct": false, "selected": false},
-      {"answer": "(К, к)урган (С, с)лавы", "correct": true, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словы, якія неабходна пісаць з малой літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "аб..мшэць, аб’..нець, між..мперыялістычны, звыш..дэйнасць",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "над ..лбом, суб..нспектар, ад..мжэць, раз..грацца",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "аб..лгаць, з..начыць, без..ніцыятыўнасць, без..менны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "з..мправізаваць, пад..спытны, перад..нфарктны, аб..ржавелы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "аб..мшыць (хату), абр..віятура, с..сціся, супер..гра",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе прапушчана літара й:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "Лаўрэат (Дз, дз)яржаўнай прэміі", "correct": false, "selected": false},
-      {"answer": "(З, з)аслужаны майстар спорту", "correct": true, "selected": false},
-      {"answer": "Візантыйская (І, і)мперыя", "correct": false, "selected": false},
-      {"answer": "(К, к)упалаўскія мясціны", "correct": true, "selected": false},
-      {"answer": "Нацыянальны акадэмічны (В, в)ялікі тэатр оперы і балета Рэспублікі Беларусь", "correct": false, "selected": false}
-    ]},
-	{
-    "question" : "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
-    "subject" : "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+      {
+        "answer": "за..рдзець, не..дэнтычны, за..кацца, не..тралітэт",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Та..ланд, хада..ніцтва, за..меннік, пераймаць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "узы..сці, за..скрыцца, пра..гравальнік, ма..ёр",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "непры..мальны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "не..маверна вялікі, успомніць па..менна, Ле..пцыг, ня..начай",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце сказы, у якіх дапушчаны арфаграфічныя памылкі:",
+    "subject": "ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК",
     "answers": [
-      {"answer": "(П, п)ершае красавіка", "correct": false, "selected": false},
-      {"answer": "(П, п)яты год", "correct": false, "selected": false},
-      {"answer": "(В, в)осьмае сакавіка", "correct": true, "selected": false},
-      {"answer": "Генрых (Ч, ч)ацвёрты", "correct": true, "selected": false},
-      {"answer": "(Дз, дз)явятая сімфонія Бетховена", "correct": true, "selected": false}
-    ]}
-  ]
+      {
+        "answer": "Со..нца не ўзыйшло, а выйшла з-за хмары шырокімі косамі ўніз і заліло ўсё ласкавым святлом.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Дзесяць маленькіх сабак паірвуць аднаго вялікага.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Цяжкое олава бялела дрыготкім месячным святлом.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Навокал, колькі відаць пад шэрым калпаком з імглы і нізкіх хмар, уся зямля належыць юнкеру.",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "За..скрыцца сонца — вір агню.",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара с",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "а…часлівіць сябра",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ра…чыніць дзверы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ра…чытаць рукапіс",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ра…чараванне",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "новы ра…піль",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчана літара ш",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "са…чапіць рукі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ра…чуліць слухачоў",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "у…чыльніць глебу",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ра…шыць сшытак",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ра…чыніць цеста",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішуцца літары дэ, д, ды",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "(дэ, дзе)партамент",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "па(д, дз)везці",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(д, дзе)сьці",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(ды, дзі)відэнд",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(дэ, дзе)кабрысты",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішацца літара дз",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "(дэ, дзе)рывацыйны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(ду, дзю)на",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(ды, дзі)рыжабль",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "блан(ды, дзі)н",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "по(д, дз)віг",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішацца літара ц:",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "аван(цю, ту)рны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ла(ці, ты)нскі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "каран(ці, ты)н",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "зачарс(ц, т)велы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(ц, т)вёрды",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх пішацца літара т",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "(ці, ты)гровая",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "аўтары(це, тэ)тны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "лі(ц, т)віны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(це, тэ)тэрмінатар",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "прадук(ці, ты)ўнасць ",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчаны мяккі знак",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "кон..чыкі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "голуб..",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "парц..ера",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "карэн..чыкі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "суб..ект",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх прапушчаны апостаф",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "раз..юшыцца",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "надвор..е",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сен..ёра",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вандроў..е",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "інтэрв..ю",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, напісаныя без арфаграфічных памылак",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "нісчымніца",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ін’екцыя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "шкарлятына",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "мадзіфікацыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "эканомьце",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, напісаныя з арфаграфічнымі памылкамі",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "тюлень",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "з’едліва",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "каменьчыкі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "восенью",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сасчыпаць",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару з",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "гру…чык, перапе…чык, рэ…чык, во…чык",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ра…жыцца, ра…ведчык, …мазчык, падка…ка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ра…ліўшчык, ра…воддзе, безра…важны, дэ…арганізацыя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "у…межак, зае…джаны, дэ…арганізацыя, ды…баланс",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ды…’юнкцыя, ра…моўны, бя…межны, …далёк",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару с",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "ра…часаць, ды…кваліфікацыя, бе…чалавечна, пя…чаны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ма…штаб, …чырванелы, у…чыльніць, ра…-пора…",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "спарт…мен, …чарсцвець, ды…камфорт, ра…шыфроўшчык",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ды…гармонія, ай…берг, ра…чысціць, у…чынаць",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "бе…сэнсоўны, …ымправізаваць, дые…, да…чэнту",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару ш",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "барабан…чык, у…чуваць, …чаўе, ні…чымны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ро…чына, Ільіні…на, сма…на, разно…чык",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ву…ка, яе…ня, …чаня, сардэ…ны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "у…чэнт, ня…часны, пры…чапіць, …чупальцы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "пры…піліць, …чытчык, нясві…скі, у…чыкнуць",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару д",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "Навагру…чына, перакла…чык, …’ябал, вопра…ка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "разве…чык, па…казаць, паво…кавы, аб’ез…чык",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кана…скі, нор…-вест, дакла…чык, воба…",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "більяр…, пра…’яўнік, прыві…, атрыбу…",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "а…кос, а…пачынак, лан…шафт, дасве…чаны",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару ц",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "Беся…ь, рэ...ька, валаго…кі, Вало…ька",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "лебе…ь, ся…ьце, рэкар…мен, на лава…цы",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "бара…ьбіт, здран…вець, мала…ьба, маста…тва",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "тка…кі, хойні…кі, у хуста…цы, узбе…кі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "жані…ьба, ча…вёрты, беласто…кі, карэлі…кі",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару г",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "дапама...чы, палё…ка, мі…цець, прабе…чыся",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "муро…, гамбур…скі, ла…чына, пру…кі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "збера…чы, галоўбу…, стры…чыся, кро…кі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ляз…, гаа…скі, архіпела…, жэмчу…",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "бу…скі, прасця…, моз…, збе…чы",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах указаныя ў дужках літары не пішуцца",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "заму(ж)ства, пта(ш)ства, пос(т)ны, тавары(ш)ства",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "свіс(т)нуць, Брэс(т)чына, кампак(т)ны, рэкор(д)ны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "дву(х)коссе, браз(г)нуць, Гумбаль(д)т, дву(х)кроп’е",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "капус(т)ны, латы(ш)скі, дву(х)бортны, кантрас(т)ны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "праяз(д)ны, балас(т)ны, ненавіс(т)ны, хара(ш)ство",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах замест пропускаў патрэбна пісаць літару т",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "кулямё…чык, рэн…ген, дыспе…чар, баске…бол",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кля…венны, ала…ка, баро…ка, увачаві…кі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пераплё…чык, ма…чына, фу…баліст, малі…венны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "джыгі…, наўра…, стандар…, гібры…",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "кангламера…, напа…хват, рэ…ка, кантынген…",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах на пісьме перадаецца дзеканне",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "фрыка(дэ,дзе)лька, (ды,дзі)зельнае, мела(ды, дзі)чны, аў(ды, дзі)торыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(д, дз)весце, гвар(дзе, дэ)йскі, (Дз, Д)мітрый, эпізо(дзі, ды)к",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Бара(дзі, ды)но, (Ды, Дзі)яна, (дэ, дзе)пазіт, п’е(дэ, дзе)стал",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "по(дз, д)віг, (Д, Дз)віна, брыга(дзі, ды)рскі, (д, дз)веры",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "абмун(дзі, ды)раванне, бар(дзю, ду)р, блан(дзі, ды)н, іў(дзе, дэ)йскі",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ва ўсіх словах на пісьме перадаецца цеканне",
+    "subject": "ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА",
+    "answers": [
+      {
+        "answer": "увер(ту, цю)ра, каран(ці, ты)н, ар(ці, ты)шок, ак(то, цё)рскі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ар(тэ, це)ль, нак(ту, цю)рн, карта(тэ, це)ка, оп(ты, ці)ка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "блакно(ты, ці)к, ман(цё, то)р, транспар(ты, ці)р, Таі(ті, ці)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "квадра(ці, ты)к, (цю, ту)рма, ма(це, тэ)рыял, (Ту, Цю)рых",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "ла(ты, ці)нскі, стар(то, цё)р, лей(це, тэ)нант, бры(ц, т)венны",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "Усяслаў (Ч, ч) арадзей",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(М, м)удрая дачка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Пётр (П, п)ершы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Г, г)арадзенскія прысмакі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Давыд (Г, г)арадзенскі",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца з малой літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(Б, б)агародзіца",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(Н, н)імфа",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Р, р)ысак",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(А, а)кацыя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(А, а)дмірал",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх усе словы пішуцца з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(Ц, ц)іхаакіянскі (Ф, ф)лот",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(З, з)аходняя (Дз, дз)віна",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Н, н)овая (З, з)еландыя",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Р, р)эч (П, п)аспалітая",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Б, б)рэсцкая (Ш, ш)аша",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх усе словы пішуцца з малой літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(Ф, ф)ранцузскі (Б, б)бульдог",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)іеўская (Р, р)усь",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(Б, б)елавежская (П, п)ушча",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)раіна ) (Ц, ц)юльпанаў",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(Б, б)ыкаўскі (С, с)стыль",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце нумары, дзе ўсе тры словы пішуцца з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(Б, б)еларускі (Дз, дз)яржаўны (У, у)ніверсітэт",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(З, з)лучаныя (Ш, ш)таты (А, а)мерыкі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)уліца (Г, г)арадскі (В, в)ал",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)упалаўскі (Т, т)эатр",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(З, з)ямля (П, п)рынца (К, к)арла",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, дзе першае слова пішацца з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(П, п)аўночная Афрыка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Т, т)уманнасць Андрамеды",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)аменны век",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(М, м)іжнародны з’езд славістаў",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)ень танкіста",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словаспалучэнні, у якіх усе прыметнікі неабходна пісаць з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "Акадэмія (Ф, ф)ізічнага выхавання і спорту",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(Ж, ж)ыровіцкі (У, у)спенскі манастыр",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)ітайская (Н, н)ародная Рэспубліка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Б, б)еларускае (Т, т)элеграфнае агенцтва",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(М, м)інскае (С, с)увораўскае вучылішча",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце нумары словазлучэнняў, у якіх назоўнікі пішуцца з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(П, п)апа Рымскі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генеральная (А, а)самблея (А, а)рганізацыі Аб’яднаных (Н, н)ацый",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Вялікая Айчынная (В, в)айна",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Чырвоная (К, к)кніга",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)урган (С, с)лавы",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія неабходна пісаць з малой літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "Лаўрэат (Дз, дз)яржаўнай прэміі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(З, з)аслужаны майстар спорту",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Візантыйская (І, і)мперыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(К, к)упалаўскія мясціны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Нацыянальны акадэмічны (В, в)ялікі тэатр оперы і балета Рэспублікі Беларусь",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца праз злучок",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "далёка (ўсходнія) сопкі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "рамэн (раланаўскі) стыль",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Буда (Кашалёўскі) раён",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "празрыста (сіні) канал",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "урачыста (прачытаны) верш",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "паўночна (каўказская) страва",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Заходне (Беларуская) раўніна",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "прыгожа (аформлены) падарунак",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "ніжэй (падпісанае) пісьмо",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Стара (дарожскі) раён",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца асобна",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "добра (арганізаванае) мерапрыемства",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "новая плашч (накідка)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Давыд (Гарадоцкі) раён",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "трыццаць (пяты) кіламетр",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "дыяметральна (процілеглае) рашэнне",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія напісаны ў адпаведнасці з арфаграфічнымі нормамі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "мала-прыкметны арыенцір",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "глыбокапаважаны грамадзянін",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "патэнцыяльна небяспечная асоба",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "саракавасьмітысячны жыхар",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "цёмна-шэры каўнер",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, напісаныя без арфаграфічных памылак",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "высокаадукаваны чалавек",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "заходне-беларускі дыялект",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "густа населеная тэрыторыя",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "малакваліфікаваны работнік",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "аператыўна-аналітычны аддзел",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, у якіх дапушчаны арфаграфічныя памылкі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "беларускі шоу-бізнес",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "вядомы мед-работнік",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "востаў Шры-Ланка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "нячутны ультра-гук",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "паўночнаірландскі танец",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца праз злучок",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "небяспечны ўзрыў (пакет)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "экс (чэмпіён) па футболе",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "торфа (брыкетны) завод",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "юрыдычна (незалежны) калега",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "контр (адміральскі) корцік",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца асобна",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "малады (унтэр) афіцэр",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(традыцыйна) выконваемыя справы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(сумесна) ўтворанае прадпрыемства",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(маторна) якарны завод",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(якi) небудзь чалавек",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "складана злучаны сказ",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сёй той не прыйшоў",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "прамыслова адсталы рэгіён",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "матора рамонтны ўчастак",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "практычна непрацаздольны сусед",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, дзе дапушчаны арфаграфічныя памылкі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "што-кольвечы з’есці",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пачаўся марш-парад",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "новы саўгас-тэхнікум",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "гэтак-сама прыйшлі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "рэдка-зубы селянін",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, дзе няма арфаграфічных памылак",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "фiзiка-матэматычны факультэт",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "адміністрацыйна залежны калектыў",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "рыбалоўны карабель",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "паўночна-ўсходнi вецер",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "канцылярска бюракратычны апарат",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца асобна",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "тысячы пасажыра (кіламетраў)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "паліто паліто (максі)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "вядомы Неміровіч (Данчанка)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "было не да (смеху)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "дзяўчына за (мужам)",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "цiха (плынны) Нёман",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "інфармацыйна (аналітычны) аддзел",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "свежа (замарожаная) рыба",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "бесперабойнае вугле(забеспячэнне)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "паўднёва (славянскiя) мовы",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словы, якія пішуцца праз злучок",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "было па ўсякаму",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "зрэзалі паў елкі",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "праехалі паў Еўропы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "размаўляў па балгарску",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "хадзіў па лесе",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе словы пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "пасажыра(паток), востра(дэфіцытны), аўтамабіле(трактарабудаванне)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(вода)трывалы, (паточна)канвеерны, (інфра)структура",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(экстра)ардынарны, (пан)амерыканскі",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(метэа)служба, (тэле)КВЗ, (кібер)прастора",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(сарві)галава, (лос)анджэлесцы, (паў)вядра",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе словы пішуцца праз злучок",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(дзяржы)дрэва, (залацiста)жоўты, (раз)пораз",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(беларуска)ўкраiнскi, (манументальна)скульптурны, па(бацькоўску)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "барэц(самбіст), (інтэлектульна)багаты, (інжынерна)педагагічны",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(альфа)часціцы, (абы)хто, (кааператыўна)прававы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(сацыяльна)замацаваны, (патока)падобны, (што)нiшто",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе словы пішуцца асобна",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "адміністрацыйна(высланы), матэрыяльна(адказны), до(мажор)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "горка(салёны), водна(меліярацыйны), віцэ(прэзідэнцкі)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "цяжка(хворы), гука(літарны), сто(пяцьдзесят)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пасля(заўтра), ніжэй(падпісаны), пан(ісламізм)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "скрыпка(сола), у(адкрытую), як(след)",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўласныя назоўнікі пішуцца праз злучок",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "Лопэ(дэ)Вега, Шалом(Алейхем), Дунін(Марцінкевіч)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "Ай(Петры), Бялыніцкі(Біруля), мікра(Чарнобыль)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "паў(Беларусі), Растоў(на)Доне, (Свіцязь)возера",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Рыо(дэ)Жанейра, Сен(Сімон), Коста(Рыка)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Людвіг(ван)Бетховен, Ван(Гог), Лацінская(Амерыка)",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе прыметнікі пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "генерал(губернатарскі), пяці(павярховы), светла(блакітны)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "жалеза(бетонны), браня(бойны), высока(мастацкі)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "кірыла(мефадзіеўскі), робін(гудаўскі), валютна(абменны)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "хіміка(тэхналагічны), навукова(абгрунтаваны)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "водна(спартыўны), ваенна(палонны), вугле(здабываючы)",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе прыслоўі пішуцца разам",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "стаяць з(боку) стала, елі ў(прыкуску), звярнулі ў(права)",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "зрабілі па(другому), апрануўся на(хаду), выць па(воўчы)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "пайшлі ў(чацвярых), здарылася ў(восень), размаўлялі тэт(а)тэт",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "паўзлі па(пластунску), плакалі на(ўзрыд), кінуліся на(ўцёкі)",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "у(пачатку) лета, прыйшоў пад(раніцу), скакалі у(галоп)",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ўсе складаныя словы, напісаны без памылак",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "свабодна-канвертуемы, энцыклапедычна-адукаваны, прынцыповановы",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "паэт-авангардыст, сімволіка-алегарычны урок-дыспут",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "народна-камедыйны, наўрад-ці, нафтаразведчык",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "мікралямпа, упяцярых, міні-футбол",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сколькі-небудзь, задарам, навекі",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ёсць складаныя словы, напісаныя з памылкамі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "папарна-размешчаныя, тэхнічнаправільны, механічна-завучаны",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "пепсі-кола, мар’іна-горскі, трыццаці пяці мільённы",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "малавопытнасць, двухтыднёвік, джыу-джыцу",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "медна-чырвоны, педработнікі, медВНУ",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "панчошна-шкарпэткавы, радыёмантаж, райсавет",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ёсць словы, якія не патрабуюць арфаграфічнай праўкі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "глуха-нямы сябар, ваенна-гістарычны раман, новае словазлучэнне",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "вывучыць на памяць, жыць па-людску, паўтараецца з году ў год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "газабензінавы рухавік, схадзіў без толку, вясёлы студэнт-першакурснік",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "угалоўна-працэсуальны кодэкс, у абмен на свабоду, выйшла па-Пецінаму",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "сацыяльна абаронены чалавек, свежапафарбаваны плот, кісла-салодкі яблык",
+        "correct": false,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце радкі, дзе ёсць словы, якія патрабуюць арфаграфічнай праўкі",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "вагон-рэстаран, паў-лімона, чатырох-павярховы",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "сацыял-дэмакратычны, фотавітрына, кінаплёнка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "экс-чэмпіён, авіяпочта, крыж-накрыж",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "відэа-дакументы, масмедыя, перакаціполе",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "спецвыпуск, парад-але, контр-адмірал",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "question": "Адзначце словазлучэнні, у якіх парадкавыя лічэбнікі пішуцца ў сярэдзіне сказа з вялікай літары",
+    "subject": "ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК",
+    "answers": [
+      {
+        "answer": "(П, п)ершае красавіка",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(П, п)яты год",
+        "correct": false,
+        "selected": false
+      },
+      {
+        "answer": "(В, в)осьмае сакавіка",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "Генрых (Ч, ч)ацвёрты",
+        "correct": true,
+        "selected": false
+      },
+      {
+        "answer": "(Дз, дз)явятая сімфонія Бетховена",
+        "correct": true,
+        "selected": false
+      }
+    ]
+  }
+]

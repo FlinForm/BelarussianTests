@@ -32,17 +32,17 @@
         <TextView
             android:id="@+id/question"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:gravity="center_vertical"
             android:padding="10dp"
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:orientation="vertical"
             android:padding="5dp">
@@ -50,27 +50,27 @@
             <CheckBox
                 android:id="@+id/firstAnswerCheckbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <CheckBox
                 android:id="@+id/secondAnswerCheckbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <CheckBox
                 android:id="@+id/thirdAnswerCheckbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <CheckBox
                 android:id="@+id/fourthAnswerCheckbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <CheckBox
                 android:id="@+id/fifthAnswerCheckbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -90,13 +90,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/selector"
             android:clickable="false"
             android:paddingEnd="5dp"
             android:paddingStart="5dp"
             android:text="@string/finish_test_button"
             android:textSize="14sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"/>
     </RelativeLayout>
 </LinearLayout>

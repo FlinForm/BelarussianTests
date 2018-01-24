@@ -39,7 +39,7 @@
             android:layout_marginStart="4dp"
             android:onClick="onClick"
             android:text="@string/continue_text"
-            android:textColor="@color/dialogButtonColor" />
+            android:textColor="@color/colorAccent" />
 
         <Button
             android:id="@+id/finishDialogExitButton"
