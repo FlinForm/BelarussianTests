@@ -42,7 +42,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/selector"
             android:onClick="onClick"
-            android:text="@string/topics_button" />
+            android:text="@string/topics_button"/>
 
         <Button
             android:id="@+id/resultsButton"
@@ -51,20 +51,17 @@
             android:layout_margin="10dp"
             android:background="@drawable/selector"
             android:onClick="onClick"
-            android:text="@string/best_results_button" />
+            android:text="@string/best_results_button"/>
+
+        <Button
+            android:id="@+id/developersButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector"
+            android:onClick="onClick"
+            android:text="@string/about_developer"/>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/developersButton"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/selector"
-        android:onClick="onClick"
-        android:text="@string/about_developer" />
 </RelativeLayout>

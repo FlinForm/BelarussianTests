@@ -7,21 +7,21 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.ContextThemeWrapper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.ActivityAuxMethods;
 import by.test.belarussian.belarussiantests.bizlogic.Player;
+import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -100,28 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 answers.setText(results[2]);
                 break;
             case R.id.topicButton:
-                initButtonslayout();
                 topicsDialog.show();
-                /*PopupMenu popupMenu = new PopupMenu(this, v);
-                for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
-                    popupMenu.getMenu().add((String) entry.getKey());
-                }
-                popupMenu.setOnMenuItemClickListener(item ->  {
-                    for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
-                        if (item.getTitle().toString().equals(entry.getKey())) {
-                            List<Question> questions = (List<Question>) entry.getValue();
-                            Quiz.resetSelectedAnswers();
-                            Quiz.testQuestions.clear();
-                            Collections.shuffle(questions);
-                            Quiz.getRandomQuestions(questions);
-                            Quiz.player = new Player(null, 0L, 0);
-                            startActivity(new Intent(this, QuizActivity.class));
-                        }
-                    }
-                    return true;
-                });
-                popupMenu.show();*/
-
                 break;
             case R.id.dialogStartButton:
                 Quiz.resetSelectedAnswers();
@@ -153,10 +132,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.developersButton:
                 rulesDialog.show();
                 break;
+            case R.id.button1:
+                startTest((Button) v.findViewById(R.id.button1));
+                topicsDialog.hide();
+                break;
+            case R.id.button2:
+                startTest((Button) v.findViewById(R.id.button2));
+                topicsDialog.hide();
+                break;
+            case R.id.button3:
+                startTest((Button) v.findViewById(R.id.button3));
+                topicsDialog.hide();
+                break;
+            case R.id.button4:
+                startTest((Button) v.findViewById(R.id.button4));
+                topicsDialog.hide();
+                break;
+            case R.id.button5:
+                startTest((Button) v.findViewById(R.id.button5));
+                topicsDialog.hide();
+                break;
+
         }
     }
 
-    private void initButtonslayout() {
+    private void startTest(Button button) {
+        for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
+            if (button.getText().toString().equals(entry.getKey())) {
+                List<Question> questions = (List<Question>) entry.getValue();
+                Quiz.resetSelectedAnswers();
+                Quiz.testQuestions.clear();
+                Collections.shuffle(questions);
+                Quiz.getRandomQuestions(questions);
+                Quiz.player = new Player(null, 0L, 0);
+                startActivity(new Intent(this, QuizActivity.class));
+            }
+        }
     }
 
     private void buildAlertDialogs() {
@@ -167,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setView(R.layout.best_results_dialog);
         resultsDialog = builder.create();
 
-        builder.setView(R.layout.rules_dialog);
+        builder.setView(R.layout.developers_dialog);
         rulesDialog = builder.create();
 
         builder.setView(R.layout.layout_topics);

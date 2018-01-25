@@ -27,4 +27,9 @@
     <string name="answers">колькасць адказаў:</string>
     <string name="name">імя:</string>
     <string name="time">час:</string>
+    <string name="topic1">ПРАВАПІС ГАЛОСНЫХ</string>
+    <string name="topic2">ПРАВАПІС ПРЫСТАЎНЫХ, У-Ў, ЛІТАР І-Ы, Й ПАСЛЯ ПРЫСТАВАК</string>
+    <string name="topic3">ПРАВАПІС ЗЫЧНЫХ, МЯККАГА ЗНАКА І АПОСТРАФА</string>
+    <string name="topic4">УЖЫВАННЕ ВЯЛІКАЙ ЛІТАРЫ</string>
+    <string name="topic5">ПРАВАПІС СЛОЎ АСОБНА, РАЗАМ, ПРАЗ ЗЛУЧОК, РАЗАМ, ПРАЗ ЗЛУЧОК</string>
 </resources>
