@@ -1,4 +1,4 @@
-package by.test.belarussian.belarussiantests.bizlogic.rvadapter;
+package by.test.belarussian.belarussiantests.bizlogic.utils;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
@@ -12,7 +12,7 @@ import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 
 public class AdapterUtils {
-    void setAnswerImage(Question question, List<ImageView> imageViews) {
+    public void setAnswerImage(Question question, List<ImageView> imageViews) {
         for (int i = 0; i < imageViews.size(); i++) {
             if (question.getAnswers()[i].isCorrect()) {
                 if (question.getAnswers()[i].isSelected()) {
@@ -24,13 +24,13 @@ public class AdapterUtils {
         }
     }
 
-    void setDefaultAnswerImage(List<ImageView> imageViews) {
+    public void setDefaultAnswerImage(List<ImageView> imageViews) {
         for (ImageView imageView : imageViews) {
             imageView.setImageDrawable(null);
         }
     }
 
-    void setCardViewColor(Question question, CardView cardView, View itemView) {
+    public void setCardViewColor(Question question, CardView cardView, View itemView) {
         if (question.isAnswered()) {
             cardView.setBackground(ContextCompat.getDrawable(itemView.getContext(),
                     R.drawable.border_green));
@@ -40,7 +40,7 @@ public class AdapterUtils {
         }
     }
 
-    void setCheckBoxes(Question question, List<CheckBox> checkBoxes) {
+    public void setCheckBoxes(Question question, List<CheckBox> checkBoxes) {
         resetCheckBoxes(checkBoxes);
         for (int i = 0; i < question.getAnswers().length; i++) {
             checkBoxes.get(i).setClickable(false);

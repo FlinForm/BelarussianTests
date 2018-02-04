@@ -16,6 +16,7 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
+import by.test.belarussian.belarussiantests.bizlogic.utils.AdapterUtils;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
     private final List<Question> questions;

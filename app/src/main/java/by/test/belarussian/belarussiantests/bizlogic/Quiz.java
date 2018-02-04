@@ -62,7 +62,7 @@ public class Quiz {
     }
 
     public static String[] getBestResults() {
-        String[] results = {"", "", ""};
+        String[] results = {by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY, by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY, by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY};
         int arrayBounds = 5;
         if (bestPlayers.size() < 5) {
             arrayBounds = bestPlayers.size();
@@ -80,7 +80,7 @@ public class Quiz {
         return results;
     }
 
-    public static void getRandomQuestions(List<Question> questionList) {
+    public static void getTenRandomQuestions(List<Question> questionList) {
         Set<Integer> numbers = new HashSet<>();
         do {
            numbers.add((int) (Math.random() * questionList.size()));

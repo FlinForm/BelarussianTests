@@ -61,7 +61,8 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
             button.setClickable(true);
             button.setOnClickListener(this);
         }
-        fragmentTitle.setText(getString(R.string.question_number) + (questionNumber + 1));
+        String titleText = getString(R.string.question_number) + ++questionNumber;
+        fragmentTitle.setText(titleText);
         question.setText(Quiz.getTestQuestions().get(questionNumber).getQuestion());
         initCheckboxes();
     }

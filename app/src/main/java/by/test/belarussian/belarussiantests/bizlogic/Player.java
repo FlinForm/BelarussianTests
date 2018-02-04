@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 
 import java.util.Date;
 
+import by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils;
+
 public class Player implements Comparable<Player> {
     private final String name;
     private long time;
@@ -63,6 +65,6 @@ public class Player implements Comparable<Player> {
 
     @Override
     public String toString() {
-        return name + " " + time + " " + correctAnswers;
+        return name + StringUtils.SPACE + time + StringUtils.SPACE + correctAnswers;
     }
 }

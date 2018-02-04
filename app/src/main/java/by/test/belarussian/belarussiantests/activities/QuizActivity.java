@@ -14,12 +14,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.fragments.QuestionFragment;
-import by.test.belarussian.belarussiantests.bizlogic.ActivityAuxMethods;
+import by.test.belarussian.belarussiantests.bizlogic.utils.ActivityUtils;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import by.test.belarussian.belarussiantests.bizlogic.viewpager.MyViewPager;
 import by.test.belarussian.belarussiantests.bizlogic.viewpager.ViewPagerAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.*;
 
 public class QuizActivity extends AppCompatActivity
         implements QuestionFragment.OnTestFinishedListener, View.OnClickListener {
@@ -82,9 +84,9 @@ public class QuizActivity extends AppCompatActivity
         Quiz.getPlayer().setTime(endTime - startTime);
         Quiz.checkQuestionAnswers();
         Quiz.getPlayer().setCorrectAnswers();
-        if (Quiz.getPlayer().getName() != null) {
+        if (!isNullOrEmpty(Quiz.getPlayer().getName())) {
             Quiz.addBestPlayer();
-            ActivityAuxMethods.saveBestPlayers(this);
+            ActivityUtils.saveBestPlayers(this);
         }
         startActivity(new Intent(this, ResultsActivity.class));
         finish();

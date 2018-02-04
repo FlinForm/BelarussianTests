@@ -9,25 +9,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import android.widget.TextView;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 import by.test.belarussian.belarussiantests.R;
-import by.test.belarussian.belarussiantests.bizlogic.ActivityAuxMethods;
+import by.test.belarussian.belarussiantests.bizlogic.utils.ActivityUtils;
 import by.test.belarussian.belarussiantests.bizlogic.Player;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Questions;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
+import by.test.belarussian.belarussiantests.fragments.TopicsDialogFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity
+        extends AppCompatActivity
+        implements View.OnClickListener, TopicsDialogFragment.OnTestStartListener {
     private static final String DEFAULT_FONTS_PATH = "fonts/Marmelad-Regular.ttf";
 
     static {
@@ -37,30 +40,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build());
     }
 
-    private AlertDialog startDialog, resultsDialog, rulesDialog, topicsDialog;
-    private Questions questions;
+    private AlertDialog startDialog, resultsDialog, rulesDialog;
 
     @Override
     protected void onResume() {
         super.onResume();
         Quiz.bestPlayers.clear();
-        ActivityAuxMethods.readBestPlayers(this);
+        ActivityUtils.readBestPlayers(this);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        buildAlertDialogs();
-        questions = new Questions();
-        ActivityAuxMethods.parseJson(questions, this);
+        ActivityUtils.parseJson(Questions.getInstance(), this);
+        buildDialogs();
     }
 
 
     @Override
     protected void onPause() {
         super.onPause();
-        ActivityAuxMethods.saveBestPlayers(this);
+        ActivityUtils.saveBestPlayers(this);
     }
 
     @Override
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.resultsButton:
                 resultsDialog.show();
-                System.out.println(Quiz.bestPlayers.size());
                 Collections.sort(Quiz.bestPlayers);
                 String[] results = Quiz.getBestResults();
                 TextView name = (TextView) resultsDialog.findViewById(R.id.bestResultsName);
@@ -100,30 +100,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 answers.setText(results[2]);
                 break;
             case R.id.topicButton:
-                topicsDialog.show();
+                getFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.fragmentContainer, new TopicsDialogFragment())
+                        .commit();
                 break;
             case R.id.dialogStartButton:
-                Quiz.resetSelectedAnswers();
-                Quiz.testQuestions.clear();
-                Collections.shuffle(questions.getQuestions());
-                Quiz.getRandomQuestions(questions.getQuestions());
-                EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
-                assert personName != null;
-                if ("".equals(personName.getText().toString())) {
-                    Snackbar.make(v,
-                            getString(R.string.name_warning),
-                            BaseTransientBottomBar.LENGTH_SHORT).show();
-                    return;
-                }
-                if (personName.getText().toString().length() > 13) {
-                    Snackbar.make(v,
-                            getString(R.string.name_length_warning),
-                            BaseTransientBottomBar.LENGTH_SHORT).show();
-                    return;
-                }
-                Quiz.player = new Player(personName.getText().toString(), 0L, 0);
-                startActivity(new Intent(this, QuizActivity.class));
-                personName.setText("");
+                startTest(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY);
                 startDialog.hide();
                 break;
             case R.id.dialogCancelButton:
@@ -132,45 +115,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.developersButton:
                 rulesDialog.show();
                 break;
-            case R.id.button1:
-                startTest((Button) v.findViewById(R.id.button1));
-                topicsDialog.hide();
-                break;
-            case R.id.button2:
-                startTest((Button) v.findViewById(R.id.button2));
-                topicsDialog.hide();
-                break;
-            case R.id.button3:
-                startTest((Button) v.findViewById(R.id.button3));
-                topicsDialog.hide();
-                break;
-            case R.id.button4:
-                startTest((Button) v.findViewById(R.id.button4));
-                topicsDialog.hide();
-                break;
-            case R.id.button5:
-                startTest((Button) v.findViewById(R.id.button5));
-                topicsDialog.hide();
-                break;
-
         }
     }
 
-    private void startTest(Button button) {
-        for (Map.Entry entry : questions.getSortedQuestions().getQuestions().entrySet()) {
-            if (button.getText().toString().equals(entry.getKey())) {
-                List<Question> questions = (List<Question>) entry.getValue();
-                Quiz.resetSelectedAnswers();
-                Quiz.testQuestions.clear();
-                Collections.shuffle(questions);
-                Quiz.getRandomQuestions(questions);
-                Quiz.player = new Player(null, 0L, 0);
-                startActivity(new Intent(this, QuizActivity.class));
+    @Override
+    public void onTestStart(@NotNull String topic) {
+        startTest(topic);
+    }
+
+    private void startTest(String topic) {
+        Quiz.resetSelectedAnswers();
+        Quiz.testQuestions.clear();
+        List<Question> questionList = by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(topic) ?
+                Questions.getInstance().getQuestions() :
+                Questions.getInstance().getSortedQuestions().getQuestions().get(topic);
+        Collections.shuffle(questionList);
+        Quiz.getTenRandomQuestions(questionList);
+        if (!by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(topic)) {
+            Quiz.player = new Player(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY, 0L, 0);
+        } else {
+            EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
+            View view = getCurrentFocus();
+            if (by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(personName.getText().toString())) {
+                Snackbar.make(view,
+                        getString(R.string.name_warning),
+                        BaseTransientBottomBar.LENGTH_SHORT).show();
+                return;
             }
+            if (personName.getText().toString().length() > 13) {
+                Snackbar.make(view,
+                        getString(R.string.name_length_warning),
+                        BaseTransientBottomBar.LENGTH_SHORT).show();
+                return;
+            }
+            personName.setText(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY);
+            Quiz.player = new Player(personName.getText().toString(), 0L, 0);
         }
+        startActivity(new Intent(this, QuizActivity.class));
     }
 
-    private void buildAlertDialogs() {
+    private void buildDialogs() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(R.layout.start_dialog);
         startDialog = builder.create();
@@ -180,8 +164,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         builder.setView(R.layout.developers_dialog);
         rulesDialog = builder.create();
-
-        builder.setView(R.layout.layout_topics);
-        topicsDialog = builder.create();
     }
 }

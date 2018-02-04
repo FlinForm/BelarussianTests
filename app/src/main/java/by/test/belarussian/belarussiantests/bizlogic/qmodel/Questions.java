@@ -4,10 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Questions {
+    private static Questions instance;
     private List<Question> questions;
     private QuestionsMap sortedQuestions;
 
-    public Questions() {
+    public static Questions getInstance() {
+        if (instance == null) {
+            instance = new Questions();
+        }
+        return instance;
+    }
+
+    private Questions() {
         questions = new ArrayList<>();
         sortedQuestions = new QuestionsMap();
     }
