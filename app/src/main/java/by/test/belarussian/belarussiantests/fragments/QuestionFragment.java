@@ -19,6 +19,8 @@ import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 
+import static android.view.View.VISIBLE;
+
 public class QuestionFragment extends Fragment implements View.OnClickListener {
     @BindViews({
             R.id.firstAnswerCheckbox,
@@ -57,11 +59,11 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         }
         if (questionNumber == 9) {
             Button button = (Button) view.findViewById(R.id.finishTestButton);
-            button.setVisibility(View.VISIBLE);
+            button.setVisibility(VISIBLE);
             button.setClickable(true);
             button.setOnClickListener(this);
         }
-        String titleText = getString(R.string.question_number) + ++questionNumber;
+        String titleText = getString(R.string.question_number) + (questionNumber + 1);
         fragmentTitle.setText(titleText);
         question.setText(Quiz.getTestQuestions().get(questionNumber).getQuestion());
         initCheckboxes();

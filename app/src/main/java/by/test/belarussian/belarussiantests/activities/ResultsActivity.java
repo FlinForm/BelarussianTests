@@ -15,11 +15,11 @@ import butterknife.ButterKnife;
 import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import by.test.belarussian.belarussiantests.bizlogic.rvadapter.RecycleViewAdapter;
-import by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.*;
+
 
 public class ResultsActivity extends AppCompatActivity {
     @BindView(R.id.resultsReturnButton) View button;
@@ -43,7 +43,7 @@ public class ResultsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         String results = getString(R.string.results_text)
-                + StringUtils.SPACE
+                + SPACE
                 + Quiz.getPlayer().getCorrectAnswers()
                 + "/"
                 + Quiz.getTestQuestions().size();

@@ -21,7 +21,7 @@ import by.test.belarussian.belarussiantests.bizlogic.viewpager.ViewPagerAdapter;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.*;
+import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty;
 
 public class QuizActivity extends AppCompatActivity
         implements QuestionFragment.OnTestFinishedListener, View.OnClickListener {
