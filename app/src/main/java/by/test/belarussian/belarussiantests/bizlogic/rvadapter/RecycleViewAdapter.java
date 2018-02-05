@@ -18,13 +18,13 @@ import by.test.belarussian.belarussiantests.R;
 import by.test.belarussian.belarussiantests.bizlogic.qmodel.Question;
 import by.test.belarussian.belarussiantests.bizlogic.utils.AdapterUtils;
 
+import static by.test.belarussian.belarussiantests.bizlogic.utils.AdapterUtils.*;
+
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
     private final List<Question> questions;
-    private final AdapterUtils adapterUtils;
 
     public RecycleViewAdapter(List<Question> questions) {
         this.questions = questions;
-        adapterUtils = new AdapterUtils();
     }
 
     @Override
@@ -35,7 +35,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
-        adapterUtils.setDefaultAnswerImage(holder.imageViews);
+        resetAnswerImage(holder.imageViews);
         holder.questionText.setText(questions.get(position).getQuestion());
         holder.checkBoxes.get(0).setText(questions.get(position).getAnswers()[0].getAnswer());
         holder.checkBoxes.get(1).setText(questions.get(position).getAnswers()[1].getAnswer());
@@ -46,9 +46,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         holder.checkBoxes.get(3).setText(questions.get(position).getAnswers()[3].getAnswer());
         holder.checkBoxes.get(4).setText(questions.get(position).getAnswers()[4].getAnswer());
         holder.checkBoxes.get(4).setText(questions.get(position).getAnswers()[4].getAnswer());
-        adapterUtils.setAnswerImage(questions.get(position), holder.imageViews);
-        adapterUtils.setCardViewColor(questions.get(position), holder.cardView, holder.itemView);
-        adapterUtils.setCheckBoxes(questions.get(position), holder.checkBoxes);
+        setAnswerImage(questions.get(position), holder.imageViews);
+        setCardViewColor(questions.get(position), holder.cardView, holder.itemView);
+        setCheckBoxes(questions.get(position), holder.checkBoxes);
     }
 
     @Override

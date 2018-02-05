@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +28,9 @@ import by.test.belarussian.belarussiantests.bizlogic.Quiz;
 import by.test.belarussian.belarussiantests.fragments.TopicsDialogFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY;
+import static by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty;
 
 public class MainActivity
         extends AppCompatActivity
@@ -106,8 +110,7 @@ public class MainActivity
                         .commit();
                 break;
             case R.id.dialogStartButton:
-                startTest(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY);
-                startDialog.hide();
+                startTest(EMPTY, v);
                 break;
             case R.id.dialogCancelButton:
                 startDialog.hide();
@@ -120,37 +123,40 @@ public class MainActivity
 
     @Override
     public void onTestStart(@NotNull String topic) {
-        startTest(topic);
+        startTest(topic, null);
     }
 
-    private void startTest(String topic) {
+    private void startTest(String topic, View view) {
         Quiz.resetSelectedAnswers();
         Quiz.testQuestions.clear();
-        List<Question> questionList = by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(topic) ?
+        List<Question> questionList = isNullOrEmpty(topic) ?
                 Questions.getInstance().getQuestions() :
                 Questions.getInstance().getSortedQuestions().getQuestions().get(topic);
         Collections.shuffle(questionList);
         Quiz.getTenRandomQuestions(questionList);
-        if (!by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(topic)) {
-            Quiz.player = new Player(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY, 0L, 0);
-        } else {
+        if (!isNullOrEmpty(topic)) {
+            Quiz.player = new Player(EMPTY, 0L, 0);
+        } else if (view != null) {
+            Log.d("TAG", "1");
             EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
-            View view = getCurrentFocus();
-            if (by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.isNullOrEmpty(personName.getText().toString())) {
+            if (isNullOrEmpty(personName.getText().toString())) {
+                Log.d("TAG", "2");
                 Snackbar.make(view,
                         getString(R.string.name_warning),
                         BaseTransientBottomBar.LENGTH_SHORT).show();
                 return;
             }
             if (personName.getText().toString().length() > 13) {
+                Log.d("TAG", "3");
                 Snackbar.make(view,
                         getString(R.string.name_length_warning),
                         BaseTransientBottomBar.LENGTH_SHORT).show();
                 return;
             }
-            personName.setText(by.test.belarussian.belarussiantests.bizlogic.utils.StringUtils.EMPTY);
+            personName.setText(EMPTY);
             Quiz.player = new Player(personName.getText().toString(), 0L, 0);
         }
+        startDialog.hide();
         startActivity(new Intent(this, QuizActivity.class));
     }
 
