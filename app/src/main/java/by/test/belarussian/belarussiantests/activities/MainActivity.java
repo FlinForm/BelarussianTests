@@ -8,7 +8,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -135,17 +134,14 @@ public class MainActivity
         if (!isNullOrEmpty(topic)) {
             Quiz.player = new Player(EMPTY, 0L, 0);
         } else if (view != null) {
-            Log.d("TAG", "1");
             EditText personName = (EditText) startDialog.findViewById(R.id.nameEditText);
             if (isNullOrEmpty(personName.getText().toString())) {
-                Log.d("TAG", "2");
                 Snackbar.make(view,
                         getString(R.string.name_warning),
                         BaseTransientBottomBar.LENGTH_SHORT).show();
                 return;
             }
             if (personName.getText().toString().length() > 13) {
-                Log.d("TAG", "3");
                 Snackbar.make(view,
                         getString(R.string.name_length_warning),
                         BaseTransientBottomBar.LENGTH_SHORT).show();
