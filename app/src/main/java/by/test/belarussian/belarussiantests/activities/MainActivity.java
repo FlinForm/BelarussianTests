@@ -1,5 +1,6 @@
 package by.test.belarussian.belarussiantests.activities;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -42,6 +43,7 @@ public class MainActivity
     }
 
     private AlertDialog startDialog, resultsDialog, rulesDialog;
+    private Fragment topicsFragment;
 
     @Override
     protected void onResume() {
@@ -67,7 +69,12 @@ public class MainActivity
 
     @Override
     public void onBackPressed() {
-        finish();
+        if (topicsFragment != null) {
+            getFragmentManager().beginTransaction().detach(topicsFragment).commit();
+            topicsFragment = null;
+        } else {
+            finish();
+        }
     }
 
     @Override
@@ -101,9 +108,10 @@ public class MainActivity
                 answers.setText(results[2]);
                 break;
             case R.id.topicButton:
+                topicsFragment = new TopicsDialogFragment();
                 getFragmentManager()
                         .beginTransaction()
-                        .add(R.id.fragmentContainer, new TopicsDialogFragment())
+                        .add(R.id.fragmentContainer, topicsFragment)
                         .commit();
                 break;
             case R.id.dialogStartButton:
@@ -121,6 +129,7 @@ public class MainActivity
     @Override
     public void onTestStart(@NonNull String topic) {
         startTest(topic, null);
+        topicsFragment = null;
     }
 
     private void startTest(String topic, View view) {
@@ -147,8 +156,8 @@ public class MainActivity
                         BaseTransientBottomBar.LENGTH_SHORT).show();
                 return;
             }
-            personName.setText(EMPTY);
             Quiz.player = new Player(personName.getText().toString(), 0L, 0);
+            personName.setText(EMPTY);
         }
         startDialog.hide();
         startActivity(new Intent(this, QuizActivity.class));
