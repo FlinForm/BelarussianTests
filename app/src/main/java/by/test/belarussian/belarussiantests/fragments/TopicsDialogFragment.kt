@@ -41,7 +41,7 @@ class TopicsDialogFragment : DialogFragment(), AdapterView.OnItemClickListener {
             savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-        listView = view!!.findViewById(R.id.topicsListView) as ListView
+        listView = view?.findViewById(R.id.topicsListView) as ListView
         initListView(view)
     }
 
